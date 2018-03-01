@@ -1,0 +1,6 @@
+Date_time : 2018-01-29 15:35:36 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : hkaran@gmail.com
+Date_time : 2018-01-29 15:35:46 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : hkaran@gmail.com
+Date_time : 2018-01-29 15:35:55 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : hkaran@gmail.com
+Date_time : 2018-01-29 15:36:50 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : harithanjai@gmail.com
+Date_time : 2018-01-29 15:36:55 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : harithanjai@gmail.com
+Date_time : 2018-01-29 15:38:47 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : harithanjai@gmail.com

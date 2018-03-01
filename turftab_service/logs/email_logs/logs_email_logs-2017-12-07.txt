@@ -1,0 +1,4 @@
+Date_time : 2017-12-07 11:53:37 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : chat1@live.com
+Date_time : 2017-12-07 12:03:57 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : chat01@live.com
+Date_time : 2017-12-07 12:06:13 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : chat02@live.com
+Date_time : 2017-12-07 14:06:56 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : chat03@live.com

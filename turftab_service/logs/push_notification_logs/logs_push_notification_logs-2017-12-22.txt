@@ -1,0 +1,13 @@
+Date_time : 2017-12-22 12:12:22 --> Status : FALSE --> Device Token :  --> User ID : 202 -->  Error Message : MissingRegistration
+Date_time : 2017-12-22 12:14:46 --> Status : FALSE --> Device Token :  --> User ID : 202 -->  Error Message : MissingRegistration
+Date_time : 2017-12-22 15:09:19 --> Status : FALSE --> Device Token : fwRgGSW7wjM:APA91bE_9LGpRPEAQLi68YLY383ISG_4yrovDDHvE0AAon1CC0CwD4ywWmyS4QxUOvUry4x5ipBqKK2aO0oVZYovGtDslSQPCq7h9W8lvll9Hbq7BFABOwA_QMKmyjY_rhlksTKti9bo --> User ID : 304 -->  Error Message : NotRegistered
+Date_time : 2017-12-22 15:24:58 --> Status : FALSE --> Device Token :  --> User ID : 202 -->  Error Message : MissingRegistration
+Date_time : 2017-12-22 15:42:12 --> Status : FALSE --> Device Token :  --> User ID : 202 -->  Error Message : MissingRegistration
+Date_time : 2017-12-22 15:42:19 --> Status : FALSE --> Device Token :  --> User ID : 202 -->  Error Message : MissingRegistration
+Date_time : 2017-12-22 18:25:59 --> Status : FALSE --> Device Token :  --> User ID : 202 --> Event ID : 153 --> Error Message : MissingRegistration
+Date_time : 2017-12-22 18:25:59 --> Status : FALSE --> Device Token :  --> User ID : 247 --> Event ID : 153 --> Error Message : MissingRegistration
+Date_time : 2017-12-22 18:30:52 --> Status : FALSE --> Device Token :  --> User ID : 202 -->  Error Message : MissingRegistration
+Date_time : 2017-12-22 18:40:37 --> Status : FALSE --> Device Token :  --> User ID : 202 --> Event ID : 153 --> Error Message : MissingRegistration
+Date_time : 2017-12-22 18:40:37 --> Status : FALSE --> Device Token :  --> User ID : 247 --> Event ID : 153 --> Error Message : MissingRegistration
+Date_time : 2017-12-22 18:42:06 --> Status : FALSE --> Device Token :  --> User ID : 202 --> Event ID : 154 --> Error Message : MissingRegistration
+Date_time : 2017-12-22 18:42:36 --> Status : FALSE --> Device Token :  --> User ID : 247 --> Event ID : 154 --> Error Message : MissingRegistration

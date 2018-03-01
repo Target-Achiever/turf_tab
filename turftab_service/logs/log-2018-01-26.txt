@@ -1,0 +1,3 @@
+ERROR - 2018-01-26 09:33:03 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '))' at line 3 - Invalid query: SELECT `logs_device_type`, `logs_device_token`, `users_id`
+FROM `ct_user_logs`
+WHERE (`logs_login_status` = 1 AND `users_id` IN ())

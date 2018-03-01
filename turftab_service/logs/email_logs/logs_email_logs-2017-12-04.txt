@@ -1,0 +1,3 @@
+Date_time : 2017-12-04 11:45:56 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sweetkannan05@gmail.com
+Date_time : 2017-12-04 12:35:26 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sweetkannan05@gmail.com
+Date_time : 2017-12-04 12:38:01 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sweetkannan05@gmail.com

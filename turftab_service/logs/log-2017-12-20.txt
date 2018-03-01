@@ -1,0 +1,4 @@
+ERROR - 2017-12-20 13:23:41 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 193
+ERROR - 2017-12-20 13:23:41 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 322
+ERROR - 2017-12-20 13:25:15 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 193
+ERROR - 2017-12-20 13:25:15 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 322

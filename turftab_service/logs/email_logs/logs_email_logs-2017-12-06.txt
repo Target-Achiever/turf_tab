@@ -1,0 +1,5 @@
+Date_time : 2017-12-06 13:04:26 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : xmpp@live.com
+Date_time : 2017-12-06 13:17:42 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : jc@live.com
+Date_time : 2017-12-06 13:26:24 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaraj@live.com
+Date_time : 2017-12-06 14:06:40 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivasmash@live.com
+Date_time : 2017-12-06 15:10:11 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : xmpp01@live.com

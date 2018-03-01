@@ -1,0 +1,1 @@
+Date_time : 2018-01-03 14:02:22 --> Status : FALSE --> Device Token : ec4kCcSmbKg:APA91bGNRA56hxTU-9k8jVmgDi2Gf1aPjEJZonFwD-wZnUdW14Qwd70zfIO0Pt8Uao8oBDe3EIJIB3gwReYzVN9lCVhL9eAv6RAsGYAp0j1tnTR-Ewd2TnNQAh8EJ9DlFFDCj-8senp9 --> User ID : 202 -->  Error Message : NotRegistered

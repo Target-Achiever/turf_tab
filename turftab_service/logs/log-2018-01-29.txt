@@ -1,0 +1,1 @@
+ERROR - 2018-01-29 16:03:03 --> Severity: Parsing Error --> syntax error, unexpected '402' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 288

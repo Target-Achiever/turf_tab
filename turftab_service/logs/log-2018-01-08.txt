@@ -1,0 +1,14 @@
+ERROR - 2018-01-08 18:57:33 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 18:57:33 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:08:42 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:08:42 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:14:39 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:14:39 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:22:11 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:22:11 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:31:03 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:31:03 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:31:03 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:31:03 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:49:50 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-08 19:49:50 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138

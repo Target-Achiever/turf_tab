@@ -1,0 +1,17 @@
+ERROR - 2017-11-30 10:20:33 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-11-30 12:19:35 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 171
+ERROR - 2017-11-30 12:19:36 --> Query error: Unknown column 'public' in 'where clause' - Invalid query: SELECT `logs_device_type`, `logs_device_token`, `users_id`
+FROM `ct_user_logs`
+WHERE (`logs_login_status` = 1 AND `users_id` IN (public))
+ERROR - 2017-11-30 19:35:29 --> Severity: Notice --> Undefined index: payKey /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 22
+ERROR - 2017-11-30 19:35:29 --> Severity: Notice --> Undefined index: paymentInfoList /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 22
+ERROR - 2017-11-30 19:35:29 --> Severity: Notice --> Undefined index: paymentInfoList /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 22
+ERROR - 2017-11-30 19:41:22 --> Severity: Notice --> Undefined index: payKey /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 22
+ERROR - 2017-11-30 19:41:22 --> Severity: Notice --> Undefined index: paymentInfoList /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 22
+ERROR - 2017-11-30 19:41:22 --> Severity: Notice --> Undefined index: paymentInfoList /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 22
+ERROR - 2017-11-30 19:41:22 --> Severity: Warning --> rtrim() expects parameter 1 to be string, array given /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_system/libraries/Email.php 677
+ERROR - 2017-11-30 19:47:22 --> Severity: Notice --> Undefined index: payKey /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 27
+ERROR - 2017-11-30 19:47:22 --> Severity: Notice --> Undefined index: paymentInfoList /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 27
+ERROR - 2017-11-30 19:47:22 --> Severity: Notice --> Undefined index: paymentInfoList /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 27
+ERROR - 2017-11-30 22:41:03 --> The provided image is not valid.
+ERROR - 2017-11-30 22:41:03 --> Your server does not support the GD function required to process this type of image.

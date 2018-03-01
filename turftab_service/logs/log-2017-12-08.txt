@@ -1,0 +1,19 @@
+ERROR - 2017-12-08 14:52:38 --> Severity: Notice --> Undefined index: reviews_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Review_model.php 109
+ERROR - 2017-12-08 16:11:13 --> Severity: Warning --> pack(): Type H: illegal hex digit s /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:13 --> Severity: Warning --> pack(): Type H: illegal hex digit s /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:13 --> Severity: Warning --> pack(): Type H: illegal hex digit r /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:13 --> Severity: Warning --> pack(): Type H: illegal hex digit s /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:13 --> Severity: Warning --> pack(): Type H: illegal hex digit s /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:13 --> Severity: Warning --> pack(): Type H: illegal hex digit v /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:13 --> Severity: Warning --> pack(): Type H: illegal hex digit v /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:34 --> Severity: Warning --> pack(): Type H: illegal hex digit s /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:34 --> Severity: Warning --> pack(): Type H: illegal hex digit s /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:34 --> Severity: Warning --> pack(): Type H: illegal hex digit r /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:34 --> Severity: Warning --> pack(): Type H: illegal hex digit s /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:34 --> Severity: Warning --> pack(): Type H: illegal hex digit s /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:34 --> Severity: Warning --> pack(): Type H: illegal hex digit v /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:11:34 --> Severity: Warning --> pack(): Type H: illegal hex digit v /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 373
+ERROR - 2017-12-08 16:24:02 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-08 16:24:18 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-08 16:25:58 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-08 21:07:33 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149

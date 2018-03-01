@@ -1,0 +1,2 @@
+Date_time : 2017-11-30 12:18:09 --> Status : FALSE --> Device Token : fsdfsrfasdfadfsfvcf34dfv --> User ID : 212 --> Event ID : 109 --> Error Message : InvalidRegistration
+Date_time : 2017-11-30 12:19:35 --> Status : FALSE --> Device Token : fsdfsrfasdfadfsfvcf34dfv --> User ID : 212 --> Event ID : 109 --> Error Message : InvalidRegistration

@@ -1,0 +1,41 @@
+ERROR - 2017-11-24 11:39:02 --> Severity: Notice --> Undefined index: new_password /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Settings.php 89
+ERROR - 2017-11-24 13:33:19 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '253'
+ERROR - 2017-11-24 13:33:35 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '253'
+ERROR - 2017-11-24 13:33:42 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '253'
+ERROR - 2017-11-24 13:34:53 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '253'
+ERROR - 2017-11-24 14:41:20 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '256'
+ERROR - 2017-11-24 14:41:49 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '256'
+ERROR - 2017-11-24 14:44:11 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '256'
+ERROR - 2017-11-24 14:44:45 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '256'
+ERROR - 2017-11-24 14:47:13 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '209'
+ERROR - 2017-11-24 14:47:21 --> Query error: Unknown column 'u.user_hobbies' in 'field list' - Invalid query: SELECT `u`.`users_id` as `user_id`, `u`.`user_fullname`, `u`.`user_name`, `u`.`user_country_code`, `u`.`user_email`, `u`.`user_mobile`, `u`.`user_gender`, `u`.`user_dob`, `u`.`user_hobbies`, `u`.`user_profile_status`, `u`.`user_turfmate_image`, `u`.`user_description`, `u`.`user_register_type`, `u`.`user_profile_updated_date`, `u`.`user_profile_created_date`, `a`.`albums_id`, `a`.`albums_path`
+FROM `ct_users` `u`
+LEFT JOIN `ct_albums` `a` ON `u`.`users_id`=`a`.`users_id` AND `a`.`album_type`=2 AND `a`.`albums_status`=1
+WHERE `u`.`users_id` = '209'

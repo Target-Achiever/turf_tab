@@ -1,0 +1,1 @@
+ERROR - 2017-12-22 18:42:35 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461

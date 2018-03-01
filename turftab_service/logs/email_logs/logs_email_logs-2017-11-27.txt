@@ -1,0 +1,5 @@
+Date_time : 2017-11-27 11:30:47 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : m@mailinator.com
+Date_time : 2017-11-27 14:23:13 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : d@mailinator.com
+Date_time : 2017-11-27 15:06:01 --> Status : FALSE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : g
+Date_time : 2017-11-27 15:06:05 --> Status : FALSE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : g
+Date_time : 2017-11-27 15:06:41 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : diptiranjanmallick2790@gmail.com

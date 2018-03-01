@@ -1,0 +1,16 @@
+Date_time : 2017-11-29 10:14:54 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@a.com
+Date_time : 2017-11-29 10:15:26 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@a.com
+Date_time : 2017-11-29 10:15:45 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@a.com
+Date_time : 2017-11-29 10:21:46 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@abcdef.com
+Date_time : 2017-11-29 10:23:08 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@a.com
+Date_time : 2017-11-29 10:44:03 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : a@a.com
+Date_time : 2017-11-29 13:56:18 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : nice@gmail.com
+Date_time : 2017-11-29 14:01:56 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : hello@live.com
+Date_time : 2017-11-29 14:04:22 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : haihello@h.com
+Date_time : 2017-11-29 14:10:11 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : siva@live.com
+Date_time : 2017-11-29 14:16:28 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : smash@live.com
+Date_time : 2017-11-29 14:19:32 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : smashs@live.com
+Date_time : 2017-11-29 14:19:47 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : smashs@live.com
+Date_time : 2017-11-29 16:14:16 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : roslyn@mailinator.com
+Date_time : 2017-11-29 16:17:06 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : roslyn@mailinator.com
+Date_time : 2017-11-29 17:25:24 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : roslyn@mailinator.com

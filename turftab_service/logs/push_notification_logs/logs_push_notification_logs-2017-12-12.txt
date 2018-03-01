@@ -1,0 +1,7 @@
+Date_time : 2017-12-12 13:07:44 --> Status : FALSE --> Device Token : fsdfsr3rdfsr32txvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-12-12 13:07:57 --> Status : FALSE --> Device Token : fsdfsr3rdfsr32txvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-12-12 13:08:14 --> Status : FALSE --> Device Token : fsdfsr3rdfsr32txvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-12-12 13:08:42 --> Status : FALSE --> Device Token : fsdfsr3rdfsr32txvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-12-12 13:09:04 --> Status : FALSE --> Device Token : fsdfsr3rdfsr32txvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-12-12 13:09:36 --> Status : FALSE --> Device Token : fsdfsr3rdfsr32txvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-12-12 13:09:58 --> Status : FALSE --> Device Token : fsdfsr3rdfsr32txvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration

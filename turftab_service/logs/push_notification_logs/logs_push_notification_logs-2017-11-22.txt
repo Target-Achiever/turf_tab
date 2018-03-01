@@ -1,0 +1,3 @@
+Date_time : 2017-11-22 12:44:03 --> Status : FALSE --> Device Token :  --> User ID : 247 --> Event ID : 83 --> Error Message : MissingRegistration
+Date_time : 2017-11-22 12:47:22 --> Status : FALSE --> Device Token :  --> User ID : 247 --> Event ID : 83 --> Error Message : MissingRegistration
+Date_time : 2017-11-22 12:47:44 --> Status : FALSE --> Device Token :  --> User ID : 247 --> Event ID : 83 --> Error Message : MissingRegistration

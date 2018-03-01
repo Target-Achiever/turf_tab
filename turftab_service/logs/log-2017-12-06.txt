@@ -1,0 +1,3 @@
+ERROR - 2017-12-06 11:50:14 --> Severity: Notice --> Undefined index: event_user_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Review_model.php 83
+ERROR - 2017-12-06 11:53:12 --> Severity: Notice --> Undefined index: event_user_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Review_model.php 83
+ERROR - 2017-12-06 11:54:40 --> Severity: Notice --> Undefined index: event_user_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Review_model.php 83

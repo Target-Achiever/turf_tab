@@ -1,0 +1,6 @@
+ERROR - 2017-11-20 10:53:13 --> Severity: Parsing Error --> syntax error, unexpected ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Chat_model.php 171
+ERROR - 2017-11-20 11:53:33 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 197
+ERROR - 2017-11-20 19:09:26 --> Severity: Notice --> Undefined index: user_country_code /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Settings.php 189
+ERROR - 2017-11-20 19:09:26 --> Severity: Notice --> Undefined index: user_country_code /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Settings.php 196
+ERROR - 2017-11-20 19:10:58 --> Severity: Notice --> Undefined index: user_country_code /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Settings.php 189
+ERROR - 2017-11-20 19:10:58 --> Severity: Notice --> Undefined index: user_country_code /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Settings.php 196

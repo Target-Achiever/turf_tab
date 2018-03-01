@@ -1,0 +1,12 @@
+ERROR - 2018-01-24 12:17:48 --> Severity: Notice --> Undefined variable: user_action_count /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Turfmate_model.php 210
+ERROR - 2018-01-24 12:17:52 --> Severity: Notice --> Undefined variable: user_action_count /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Turfmate_model.php 210
+ERROR - 2018-01-24 12:17:54 --> Severity: Notice --> Undefined variable: user_action_count /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Turfmate_model.php 210
+ERROR - 2018-01-24 12:17:56 --> Severity: Notice --> Undefined variable: user_action_count /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Turfmate_model.php 210
+ERROR - 2018-01-24 12:20:19 --> Severity: Notice --> Undefined variable: user_action_count /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Chat_model.php 573
+ERROR - 2018-01-24 12:20:19 --> Severity: Notice --> Undefined variable: user_action_count /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Chat_model.php 574
+ERROR - 2018-01-24 12:20:29 --> Severity: Notice --> Undefined variable: user_action_count /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Chat_model.php 573
+ERROR - 2018-01-24 12:20:29 --> Severity: Notice --> Undefined variable: user_action_count /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Chat_model.php 574
+ERROR - 2018-01-24 17:01:08 --> Unable to load the requested class: Referral_code
+ERROR - 2018-01-24 17:01:20 --> Unable to load the requested class: Referral_code
+ERROR - 2018-01-24 17:02:01 --> Unable to load the requested class: Referral_code
+ERROR - 2018-01-24 17:03:58 --> Unable to load the requested class: Referral_code

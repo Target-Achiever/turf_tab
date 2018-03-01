@@ -1,0 +1,2 @@
+Date_time : 2017-12-02 13:55:45 --> Status : FALSE --> Device Token : frkY0QMhBw8:APA91bH1rFELuvGuF59HZNMqwqQt6VJ-lwSaASAhQPYqDlITBDJv4hu2tupjxOy_GPsFiVErZJ67WMgG2tt8NNXdIYC44ZTrjZ4283W2-O4eRBP4DsmgRE-xfGKXB9p47S1Kh7hKBuRg --> User ID : 262 -->  Error Message : NotRegistered
+Date_time : 2017-12-02 22:29:58 --> Status : FALSE --> Device Token : dfEzwb9rDu8:APA91bEKGB-xBabdvQ-8tDK8f6xEvFSYnBXT3LgCEOXWO4W2-1xbaZ5kCTyTtOjvAYTom6waOdkZJQ3a4YiC2qVXM_PYr-kZagQWksPywFKqrXbJmCVItfRlLNSjbEmxyPz5JSAPgz6J --> User ID : 259 -->  Error Message : NotRegistered

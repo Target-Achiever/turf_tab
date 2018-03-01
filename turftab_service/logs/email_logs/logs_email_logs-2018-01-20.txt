@@ -1,0 +1,6 @@
+Date_time : 2018-01-20 12:49:05 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : user1@mailinator.com
+Date_time : 2018-01-20 12:51:16 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : user2@mailinator.com
+Date_time : 2018-01-20 13:52:06 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : user3@mailinator.com
+Date_time : 2018-01-20 14:30:23 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : user4@mailinator.com
+Date_time : 2018-01-20 16:49:47 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : heyy@mailinator.com
+Date_time : 2018-01-20 16:58:32 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : user5@mailinator.com

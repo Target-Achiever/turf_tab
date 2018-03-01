@@ -1,0 +1,37 @@
+ERROR - 2017-11-28 10:28:12 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '208))' at line 3 - Invalid query: SELECT `logs_device_type`, `logs_device_token`, `users_id`
+FROM `ct_user_logs`
+WHERE (`logs_login_status` = 1 AND `users_id` IN (,208))
+ERROR - 2017-11-28 10:28:27 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '208))' at line 3 - Invalid query: SELECT `logs_device_type`, `logs_device_token`, `users_id`
+FROM `ct_user_logs`
+WHERE (`logs_login_status` = 1 AND `users_id` IN (,208))
+ERROR - 2017-11-28 10:37:04 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '208))' at line 3 - Invalid query: SELECT `logs_device_type`, `logs_device_token`, `users_id`
+FROM `ct_user_logs`
+WHERE (`logs_login_status` = 1 AND `users_id` IN (,208))
+ERROR - 2017-11-28 11:55:22 --> The provided image is not valid.
+ERROR - 2017-11-28 11:55:22 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:09:08 --> The provided image is not valid.
+ERROR - 2017-11-28 15:09:08 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:10:57 --> The provided image is not valid.
+ERROR - 2017-11-28 15:10:57 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:11:33 --> The provided image is not valid.
+ERROR - 2017-11-28 15:11:33 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:21:01 --> The provided image is not valid.
+ERROR - 2017-11-28 15:21:01 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:21:25 --> The provided image is not valid.
+ERROR - 2017-11-28 15:21:25 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:21:27 --> The provided image is not valid.
+ERROR - 2017-11-28 15:21:27 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:25:02 --> The provided image is not valid.
+ERROR - 2017-11-28 15:25:02 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:46:41 --> The provided image is not valid.
+ERROR - 2017-11-28 15:46:41 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:50:32 --> The provided image is not valid.
+ERROR - 2017-11-28 15:50:32 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 15:56:43 --> The provided image is not valid.
+ERROR - 2017-11-28 15:56:43 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 16:02:28 --> The provided image is not valid.
+ERROR - 2017-11-28 16:02:28 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 16:02:58 --> The provided image is not valid.
+ERROR - 2017-11-28 16:02:58 --> Your server does not support the GD function required to process this type of image.
+ERROR - 2017-11-28 16:05:19 --> The provided image is not valid.
+ERROR - 2017-11-28 16:05:19 --> Your server does not support the GD function required to process this type of image.

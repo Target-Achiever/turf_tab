@@ -1,0 +1,7 @@
+Date_time : 2017-12-02 09:56:01 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : asdf@a.com
+Date_time : 2017-12-02 09:56:16 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : asdf@a.com
+Date_time : 2017-12-02 10:40:43 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : abc@a.com
+Date_time : 2017-12-02 10:42:24 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : abc@mailinator.com
+Date_time : 2017-12-02 22:48:07 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : kelvin-@mailinator.com
+Date_time : 2017-12-02 22:48:14 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : kelvin-@mailinator.com
+Date_time : 2017-12-02 22:49:48 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : kelvin-@mailinator.com

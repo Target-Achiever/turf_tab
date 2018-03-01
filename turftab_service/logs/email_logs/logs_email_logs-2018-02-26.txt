@@ -1,0 +1,5 @@
+Date_time : 2018-02-26 10:12:34 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : hell@mailintor.com
+Date_time : 2018-02-26 10:14:25 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : helloo@mailintor.com
+Date_time : 2018-02-26 10:16:02 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : gg@mailintor.com
+Date_time : 2018-02-26 10:16:17 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : gg@mailintor.com
+Date_time : 2018-02-26 10:16:54 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : gg@mailintor.com

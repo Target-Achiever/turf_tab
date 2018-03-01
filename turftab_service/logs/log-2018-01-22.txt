@@ -1,0 +1,181 @@
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 45
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 109
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 132
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 186
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 219
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 219
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 267
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 278
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 289
+ERROR - 2018-01-22 14:40:10 --> Severity: Notice --> Undefined index: api_action /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 317
+ERROR - 2018-01-22 18:23:19 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:19 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:20 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:20 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:20 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:20 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:21 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:21 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:21 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:21 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:21 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:21 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:22 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:22 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:22 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:23:47 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '202'
+ERROR - 2018-01-22 18:23:48 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '202'
+ERROR - 2018-01-22 18:23:48 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '202'
+ERROR - 2018-01-22 18:24:34 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '351'
+ERROR - 2018-01-22 18:24:39 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '351'
+ERROR - 2018-01-22 18:24:40 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '351'
+ERROR - 2018-01-22 18:26:17 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '351'
+ERROR - 2018-01-22 18:26:17 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '351'
+ERROR - 2018-01-22 18:26:20 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '351'
+ERROR - 2018-01-22 18:26:21 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '351'
+ERROR - 2018-01-22 18:27:04 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:04 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:04 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:04 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:05 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:05 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:06 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:06 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:06 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:06 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:06 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:07 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:07 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:07 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:07 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:24 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:24 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:24 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:24 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:24 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:25 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:25 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:25 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:25 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:25 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:25 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:25 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:25 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:26 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:27:26 --> Query error: Table 'client_turftab.ct_user_credits' doesn't exist - Invalid query: SELECT `user_multimedia_date`, `user_multimedia_post`, `user_multimedia_total`
+FROM `ct_user_credits`
+WHERE `users_id` = '254'
+ERROR - 2018-01-22 18:40:53 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-22 18:46:29 --> Severity: Notice --> Undefined variable: memedia_restriction /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 401
+ERROR - 2018-01-22 18:46:57 --> Severity: Notice --> Undefined variable: memedia_restriction /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 401
+ERROR - 2018-01-22 18:47:22 --> Severity: Notice --> Undefined variable: memedia_restriction /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 401
+ERROR - 2018-01-22 18:47:25 --> Severity: Notice --> Undefined variable: memedia_restriction /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 401
+ERROR - 2018-01-22 18:53:34 --> Severity: Notice --> Undefined variable: user_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Chat_model.php 569

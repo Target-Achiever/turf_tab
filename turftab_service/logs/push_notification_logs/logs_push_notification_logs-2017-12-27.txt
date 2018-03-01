@@ -1,0 +1,3 @@
+Date_time : 2017-12-27 13:38:30 --> Status : FALSE --> Device Token : cXM8OkDI_8Q:APA91bHt4pt16YDFPUW-eD8CK_xrkXd5lpi6AGuc9FSWBQAwQDj18gSg5ZyO5mTywTPtVXM07oeaYl7M_BHrvdooTUP2ZxeEcf6y-EFmgccFdtVO9npxDXORvkZA655YpajRivDoHs0x --> User ID : 315 -->  Error Message : NotRegistered
+Date_time : 2017-12-27 16:12:51 --> Status : FALSE --> Device Token : cXM8OkDI_8Q:APA91bHt4pt16YDFPUW-eD8CK_xrkXd5lpi6AGuc9FSWBQAwQDj18gSg5ZyO5mTywTPtVXM07oeaYl7M_BHrvdooTUP2ZxeEcf6y-EFmgccFdtVO9npxDXORvkZA655YpajRivDoHs0x --> User ID : 315 --> Event ID : 157 --> Error Message : NotRegistered
+Date_time : 2017-12-27 18:07:40 --> Status : FALSE --> Device Token :  --> User ID : 253 -->  Error Message : MissingRegistration

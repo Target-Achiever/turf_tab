@@ -1,0 +1,2 @@
+Date_time : 2017-11-16 11:49:16 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : redmi@mailinator.com
+Date_time : 2017-11-16 12:18:35 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : pradeep.s@pickzy.com

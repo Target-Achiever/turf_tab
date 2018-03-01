@@ -1,0 +1,5 @@
+Date_time : 2017-12-25 06:17:30 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : jopapa1001@yahoo.com
+Date_time : 2017-12-25 06:17:38 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : jopapa1001@yahoo.com
+Date_time : 2017-12-25 06:18:17 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : jopapa1001@yahoo.com 
+Date_time : 2017-12-25 06:18:22 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : jopapa1001@yahoo.com 
+Date_time : 2017-12-25 06:20:01 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : kbrp221@gmail.com

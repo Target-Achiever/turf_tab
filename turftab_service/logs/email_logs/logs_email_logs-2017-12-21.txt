@@ -1,0 +1,5 @@
+Date_time : 2017-12-21 13:28:02 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : dip@mailinator.com
+Date_time : 2017-12-21 13:29:31 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : dip@mailinator.com
+Date_time : 2017-12-21 13:37:46 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : pradeep@mailinator.com
+Date_time : 2017-12-21 13:39:48 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : dipu@mailinator.com
+Date_time : 2017-12-21 14:58:33 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : chat04@live.com

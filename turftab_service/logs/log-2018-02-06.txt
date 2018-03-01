@@ -1,0 +1,5 @@
+ERROR - 2018-02-06 11:50:21 --> Severity: Notice --> Undefined offset: 1 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Event_model.php 390
+ERROR - 2018-02-06 11:50:45 --> Severity: Notice --> Undefined offset: 1 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Event_model.php 390
+ERROR - 2018-02-06 16:58:14 --> Severity: Notice --> Undefined index: game_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Tictactoe_model.php 69
+ERROR - 2018-02-06 17:13:32 --> Severity: Notice --> Undefined index: users_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/views/tictactoe.php 6
+ERROR - 2018-02-06 17:13:32 --> Severity: Notice --> Undefined index: users_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/views/tictactoe.php 15

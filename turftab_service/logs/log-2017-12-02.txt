@@ -1,0 +1,20 @@
+ERROR - 2017-12-02 10:14:06 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-02 10:14:27 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-02 10:14:45 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-02 10:15:37 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-02 10:18:14 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-02 10:18:14 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '))' at line 3 - Invalid query: SELECT `logs_device_type`, `logs_device_token`, `users_id`
+FROM `ct_user_logs`
+WHERE (`logs_login_status` = 1 AND `users_id` IN ())
+ERROR - 2017-12-02 11:03:34 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 270
+ERROR - 2017-12-02 11:03:34 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 273
+ERROR - 2017-12-02 11:03:34 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 277
+ERROR - 2017-12-02 11:03:34 --> Severity: Notice --> Undefined index: user_password /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 281
+ERROR - 2017-12-02 11:03:34 --> Severity: Notice --> Undefined index: user_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/User_model.php 122
+ERROR - 2017-12-02 12:03:44 --> Severity: error --> Exception: /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Profile_model.php exists, but doesn't declare class Profile_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_system/core/Loader.php 336
+ERROR - 2017-12-02 22:27:21 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-02 22:27:21 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '))' at line 3 - Invalid query: SELECT `logs_device_type`, `logs_device_token`, `users_id`
+FROM `ct_user_logs`
+WHERE (`logs_login_status` = 1 AND `users_id` IN ())
+ERROR - 2017-12-02 22:27:34 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-02 22:27:44 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461

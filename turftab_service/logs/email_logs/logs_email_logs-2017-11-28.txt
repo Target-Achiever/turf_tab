@@ -1,0 +1,14 @@
+Date_time : 2017-11-28 08:44:28 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : diptiranjanmallick2790@gmail.com
+Date_time : 2017-11-28 08:53:52 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : diptiranjanmallick2790@gmail.com
+Date_time : 2017-11-28 10:15:41 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sf@a.com
+Date_time : 2017-11-28 15:40:51 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : hai@gmail.com
+Date_time : 2017-11-28 15:41:32 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : hai@gmail.com
+Date_time : 2017-11-28 16:44:39 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@abcdef.com
+Date_time : 2017-11-28 16:45:25 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@abcdef.com
+Date_time : 2017-11-28 16:45:30 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@abcdef.com
+Date_time : 2017-11-28 16:46:45 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@abcdef.com
+Date_time : 2017-11-28 16:50:07 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@abcdefg.com
+Date_time : 2017-11-28 16:50:30 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@abcdefg.com 
+Date_time : 2017-11-28 16:54:01 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : good@da.com
+Date_time : 2017-11-28 17:02:18 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@abcdef.com
+Date_time : 2017-11-28 17:57:20 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : i@imail.com

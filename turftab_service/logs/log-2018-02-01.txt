@@ -1,0 +1,20 @@
+ERROR - 2018-02-01 15:59:36 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 15:59:37 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 16:39:34 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 16:39:34 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 16:48:09 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 16:48:09 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 16:53:35 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 16:53:35 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 16:57:09 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 16:57:09 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:09:26 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:09:26 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:13:08 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:13:08 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:35:36 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:35:36 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:37:56 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:37:56 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:41:22 --> Severity: Notice --> Undefined property: Turfmate::$chat_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471
+ERROR - 2018-02-01 17:41:22 --> Severity: Error --> Call to a member function user_profile_data() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 471

@@ -1,0 +1,2 @@
+Date_time : 2017-12-08 17:51:50 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : ramya.r@pickzy.com
+Date_time : 2017-12-08 17:52:15 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : ramya.r@pickzy.com

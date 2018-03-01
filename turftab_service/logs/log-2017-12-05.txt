@@ -1,0 +1,4 @@
+ERROR - 2017-12-05 12:38:29 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '")' at line 3 - Invalid query: SELECT *
+FROM `ct_users`
+WHERE (`user_email` = "sweetkannan05@gmail.com" AND `user_password="YVRvaFFvbHh1alFJbE80UUhpTStqQUFqUnhaRHdRV3hoR3FQTDNMTDRaOUZrbDZzWVZWQzZoSXcwQnVpY1h2SA=` = ")
+ERROR - 2017-12-05 12:56:42 --> Severity: Warning --> str_pad() expects at least 2 parameters, 1 given /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 104

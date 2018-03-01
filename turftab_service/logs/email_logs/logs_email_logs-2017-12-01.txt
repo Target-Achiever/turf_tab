@@ -1,0 +1,10 @@
+Date_time : 2017-12-01 10:43:13 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan05@gmail.com
+Date_time : 2017-12-01 10:46:10 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan05@gmail.com
+Date_time : 2017-12-01 10:49:43 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : diptiranjan.mallick@pickzy.com
+Date_time : 2017-12-01 10:49:54 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan05@gmail.com
+Date_time : 2017-12-01 10:50:09 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : diptiranjan.mallick@pickzy.com
+Date_time : 2017-12-01 11:08:28 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan05@gmail.com
+Date_time : 2017-12-01 11:09:54 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : qwerty@milintor.com
+Date_time : 2017-12-01 11:11:51 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : q@mailinator.com
+Date_time : 2017-12-01 11:12:34 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : q@mailinator.com
+Date_time : 2017-12-01 11:42:21 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan05@gmail.com

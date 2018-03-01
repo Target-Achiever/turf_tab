@@ -1,0 +1,23 @@
+ERROR - 2017-11-23 12:04:03 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 164
+ERROR - 2017-11-23 12:04:50 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 164
+ERROR - 2017-11-23 12:05:20 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 164
+ERROR - 2017-11-23 12:06:14 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 164
+ERROR - 2017-11-23 12:35:50 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 12:36:12 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 12:53:05 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 12:56:20 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 13:00:48 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 13:16:54 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 13:30:11 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 164
+ERROR - 2017-11-23 14:32:20 --> Severity: error --> Exception: /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Event_model.php exists, but doesn't declare class Event_model /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_system/core/Loader.php 336
+ERROR - 2017-11-23 15:52:41 --> Severity: Error --> Call to undefined method User_model::user_notification_count() /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 232
+ERROR - 2017-11-23 16:46:45 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 427
+ERROR - 2017-11-23 16:46:45 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 432
+ERROR - 2017-11-23 16:46:45 --> Severity: Notice --> Undefined index: user_password /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 437
+ERROR - 2017-11-23 17:10:05 --> Query error: Cannot add or update a child row: a foreign key constraint fails (`client_turftab`.`ct_blocklist`, CONSTRAINT `ct_blocklist_ibfk_2` FOREIGN KEY (`blocklist_to_id`) REFERENCES `ct_users` (`users_id`) ON DELETE CASCADE ON UPDATE CASCADE) - Invalid query: INSERT INTO `ct_blocklist` (`blocklist_from_id`, `blocklist_to_id`) VALUES ('209', '132')
+ERROR - 2017-11-23 18:05:06 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 18:06:00 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 18:06:48 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 18:07:45 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 18:09:08 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430
+ERROR - 2017-11-23 18:09:49 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 430

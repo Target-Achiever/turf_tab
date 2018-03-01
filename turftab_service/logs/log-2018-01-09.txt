@@ -1,0 +1,39 @@
+ERROR - 2018-01-09 09:59:09 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-09 10:12:08 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-09 13:37:35 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-09 13:38:04 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-09 13:41:02 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-09 13:42:05 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-09 13:42:31 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-09 13:43:05 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-09 14:09:03 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:13 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:17 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:17 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:18 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:22 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:22 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:23 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:29 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:29 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:34 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:34 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:38 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:09:39 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:15:41 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:15:48 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:16:04 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Turfmate.php 29
+ERROR - 2018-01-09 14:43:59 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 14:43:59 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 18:58:49 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 18:58:49 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:08:55 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:08:55 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:14:23 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:14:23 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:18:48 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:18:48 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:21:51 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:21:51 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:23:10 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138
+ERROR - 2018-01-09 19:23:10 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 138

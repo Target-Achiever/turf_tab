@@ -1,0 +1,7 @@
+ERROR - 2018-01-12 18:29:03 --> Severity: Notice --> Undefined index: group_member_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 161
+ERROR - 2018-01-12 18:29:03 --> Severity: Notice --> Undefined index: chat_group_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 165
+ERROR - 2018-01-12 18:29:19 --> Severity: Notice --> Undefined index: group_member_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 161
+ERROR - 2018-01-12 18:29:19 --> Severity: Notice --> Undefined index: chat_group_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 165
+ERROR - 2018-01-12 19:04:32 --> Severity: Notice --> Undefined variable: action_string /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 180
+ERROR - 2018-01-12 20:07:14 --> Severity: Notice --> Undefined index: group_member_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 161
+ERROR - 2018-01-12 20:07:14 --> Severity: Notice --> Undefined index: chat_group_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 165

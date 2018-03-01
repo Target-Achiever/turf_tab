@@ -1,0 +1,13 @@
+Date_time : 2017-11-29 18:45:41 --> Status : FALSE --> Device Token : fsdfsrfasdfadfsfvcf34dfv --> User ID : 212 --> Event ID : 107 --> Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:45:42 --> Status : FALSE --> Device Token : fsdfsrfsadrerdcfsfvcf34dfv --> User ID : 213 --> Event ID : 107 --> Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:51:16 --> Status : FALSE --> Device Token : fsdfsr3asdasdtxvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:51:31 --> Status : FALSE --> Device Token : fsdfsr3asdasdtxvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:52:44 --> Status : FALSE --> Device Token : fsdfsr3asdasdtxvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:52:48 --> Status : FALSE --> Device Token : fsdfsr3asdasdtxvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:52:50 --> Status : FALSE --> Device Token : fsdfsr3asdasdtxvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:52:52 --> Status : FALSE --> Device Token : fsdfsr3asdasdtxvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:52:56 --> Status : FALSE --> Device Token : fsdfsr3asdasdtxvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:57:54 --> Status : FALSE --> Device Token : fsdfsrfsadrerdcfsfvcf34dfv --> User ID : 213 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:57:57 --> Status : FALSE --> Device Token : fsdfsrfsadrerdcfsfvcf34dfv --> User ID : 213 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:58:22 --> Status : FALSE --> Device Token : fsdfsrfsadrerdcfsfvcf34dfv --> User ID : 213 -->  Error Message : InvalidRegistration
+Date_time : 2017-11-29 18:58:26 --> Status : FALSE --> Device Token : fsdfsrfsadrerdcfsfvcf34dfv --> User ID : 213 -->  Error Message : InvalidRegistration

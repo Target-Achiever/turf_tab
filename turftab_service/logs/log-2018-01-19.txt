@@ -1,0 +1,14 @@
+ERROR - 2018-01-19 11:32:07 --> The upload path does not appear to be valid.
+ERROR - 2018-01-19 11:33:34 --> The upload path does not appear to be valid.
+ERROR - 2018-01-19 13:19:32 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 170
+ERROR - 2018-01-19 13:19:32 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 170
+ERROR - 2018-01-19 13:20:10 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 170
+ERROR - 2018-01-19 13:20:10 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 170
+ERROR - 2018-01-19 14:46:57 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 98
+ERROR - 2018-01-19 14:46:57 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 98
+ERROR - 2018-01-19 18:18:24 --> Severity: Notice --> Undefined index: tictactoe_answer /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Game.php 189
+ERROR - 2018-01-19 18:26:00 --> Severity: Notice --> Undefined index: tictactoe_answer /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Game.php 189
+ERROR - 2018-01-19 18:26:37 --> Severity: Notice --> Undefined index: tictactoe_answer /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Game.php 189
+ERROR - 2018-01-19 18:27:29 --> Severity: Notice --> Undefined index: tictactoe_answer /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Game.php 189
+ERROR - 2018-01-19 18:28:02 --> Severity: Notice --> Undefined index: tictactoe_answer /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Game.php 189
+ERROR - 2018-01-19 18:48:05 --> Severity: Parsing Error --> syntax error, unexpected end of file, expecting function (T_FUNCTION) /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Chat_model.php 199

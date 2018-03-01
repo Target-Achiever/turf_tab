@@ -1,0 +1,14 @@
+ERROR - 2018-02-16 11:33:59 --> Severity: Notice --> Undefined variable: user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 11:33:59 --> Severity: Notice --> Undefined variable: user_profile_image /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 11:35:49 --> Severity: Notice --> Undefined variable: user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 11:35:49 --> Severity: Notice --> Undefined variable: user_profile_image /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 11:56:59 --> Severity: Notice --> Undefined variable: user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 11:56:59 --> Severity: Notice --> Undefined variable: user_profile_image /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 12:41:35 --> Severity: Notice --> Undefined variable: user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 12:41:35 --> Severity: Notice --> Undefined variable: user_profile_image /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 13:10:04 --> Severity: Notice --> Undefined variable: user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 13:10:04 --> Severity: Notice --> Undefined variable: user_profile_image /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 14:28:50 --> Severity: Notice --> Undefined variable: user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 14:28:50 --> Severity: Notice --> Undefined variable: user_profile_image /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 15:07:32 --> Severity: Notice --> Undefined variable: user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575
+ERROR - 2018-02-16 15:07:32 --> Severity: Notice --> Undefined variable: user_profile_image /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 575

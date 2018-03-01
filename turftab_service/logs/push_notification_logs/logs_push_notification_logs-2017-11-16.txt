@@ -1,0 +1,1 @@
+Date_time : 2017-11-16 11:44:53 --> Status : FALSE --> Device Token :  --> User ID : 222 -->  Error Message : MissingRegistration

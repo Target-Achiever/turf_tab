@@ -1,0 +1,1 @@
+Date_time : 2018-01-12 18:34:29 --> Status : FALSE --> Device Token : eWkb6JPuWtM:APA91bGggv5Vjknn8JiqIxF2PlJg0_4W_t89A4vYr5ggBHiWdRSc5M1exYQG4ItzFy0VHHsmNWWIwkFNaDqA1D0oATFEC5KvpX8HUxwDXheE1SYiT7p14RChDEp8Y_0YOJTwxPVMLVZZ --> User ID : 333 -->  Error Message : NotRegistered

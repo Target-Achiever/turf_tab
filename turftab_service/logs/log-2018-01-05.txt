@@ -1,0 +1,41 @@
+ERROR - 2018-01-05 14:20:15 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-05 15:30:24 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-05 15:30:33 --> Severity: Warning --> unlink(./): Is a directory /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 149
+ERROR - 2018-01-05 18:06:11 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 322
+ERROR - 2018-01-05 18:06:35 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 322
+ERROR - 2018-01-05 18:06:58 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 322
+ERROR - 2018-01-05 18:07:15 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 322
+ERROR - 2018-01-05 18:09:05 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 322
+ERROR - 2018-01-05 18:09:11 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 322
+ERROR - 2018-01-05 18:10:40 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 322
+ERROR - 2018-01-05 18:11:05 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 321
+ERROR - 2018-01-05 18:11:55 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 322
+ERROR - 2018-01-05 18:12:14 --> Severity: Parsing Error --> syntax error, unexpected '===' (T_IS_IDENTICAL), expecting ')' /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat.php 322
+ERROR - 2018-01-05 18:15:47 --> Severity: Notice --> Undefined offset: 0 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:47 --> Severity: Notice --> Undefined offset: 1 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:47 --> Severity: Notice --> Undefined index: notifications_event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 309
+ERROR - 2018-01-05 18:15:47 --> Severity: Notice --> Undefined offset: 2 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined offset: 3 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined index: notifications_event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 309
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined offset: 4 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined offset: 5 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined index: notifications_event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 309
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined offset: 6 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined offset: 7 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined index: notifications_event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 309
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined offset: 8 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined index: notifications_event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 309
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined offset: 9 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined offset: 10 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 279
+ERROR - 2018-01-05 18:15:48 --> Severity: Notice --> Undefined index: notifications_event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 309
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 0 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 1 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 2 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 3 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 4 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 5 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 6 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 7 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 8 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 9 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355
+ERROR - 2018-01-05 18:15:49 --> Severity: Notice --> Undefined offset: 10 /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Common.php 355

@@ -1,0 +1,4 @@
+ERROR - 2018-01-01 10:17:06 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2018-01-01 10:17:06 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '))' at line 3 - Invalid query: SELECT `logs_device_type`, `logs_device_token`, `users_id`
+FROM `ct_user_logs`
+WHERE (`logs_login_status` = 1 AND `users_id` IN ())

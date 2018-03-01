@@ -1,0 +1,17 @@
+Date_time : 2017-11-06 08:05:02 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : karpakamani.r@pickzy.com
+Date_time : 2017-11-06 08:13:11 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : karpakamani.r@pickzy.com
+Date_time : 2017-11-06 08:13:14 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : karpakamani.r@pickzy.com
+Date_time : 2017-11-06 09:04:56 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan05@gmail.com
+Date_time : 2017-11-06 14:37:43 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan05@gmail.com
+Date_time : 2017-11-06 15:02:05 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : venu@gmail.com
+Date_time : 2017-11-06 15:03:29 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : venu@gmail.com
+Date_time : 2017-11-06 15:30:47 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : venu@gmail.com
+Date_time : 2017-11-06 15:32:49 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : venu@gmail.com
+Date_time : 2017-11-06 15:34:48 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : venu@gmail.com
+Date_time : 2017-11-06 15:39:22 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : venu@gmail.com
+Date_time : 2017-11-06 15:39:37 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : venu@gmail.com
+Date_time : 2017-11-06 15:51:01 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan.s@pickzy.com
+Date_time : 2017-11-06 15:53:24 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan05@gmail.com
+Date_time : 2017-11-06 17:18:07 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan.s@pickzy.com
+Date_time : 2017-11-06 17:18:27 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan.s@pickzy.com
+Date_time : 2017-11-06 17:19:05 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : sivaramakannan.s@pickzy.com

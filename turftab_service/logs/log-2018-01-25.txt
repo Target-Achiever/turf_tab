@@ -1,0 +1,106 @@
+ERROR - 2018-01-25 09:11:07 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2018-01-25 09:11:13 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2018-01-25 09:11:54 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2018-01-25 09:14:52 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2018-01-25 09:45:47 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2018-01-25 09:47:18 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2018-01-25 09:47:40 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2018-01-25 11:20:53 --> Severity: Notice --> Undefined property: Chat_media::$upload /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 98
+ERROR - 2018-01-25 11:20:53 --> Severity: Error --> Call to a member function do_upload() on a non-object /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Chat_media.php 98
+ERROR - 2018-01-25 11:26:12 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Game.php 28
+ERROR - 2018-01-25 11:26:20 --> Severity: Notice --> Undefined index: unique_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Game.php 28
+ERROR - 2018-01-25 11:34:05 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2018-01-25 12:07:00 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:07:28 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',340,'259',1,1), ('259',340,'355',1,3)
+ERROR - 2018-01-25 12:07:31 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',341,'259',1,1), ('259',341,'355',1,3)
+ERROR - 2018-01-25 12:07:34 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',342,'259',1,1), ('259',342,'355',1,3)
+ERROR - 2018-01-25 12:07:40 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',343,'259',1,1), ('259',343,'288',1,3)
+ERROR - 2018-01-25 12:07:42 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',344,'259',1,1), ('259',344,'288',1,3)
+ERROR - 2018-01-25 12:07:54 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "337" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:08:01 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',345,'259',1,1), ('259',345,'288',1,3)
+ERROR - 2018-01-25 12:08:03 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',346,'259',1,1), ('259',346,'288',1,3)
+ERROR - 2018-01-25 12:08:10 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',347,'259',1,1), ('259',347,'288',1,3), ('259',347,'320',1,3), ('259',347,'202',1,3)
+ERROR - 2018-01-25 12:08:12 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',348,'259',1,1), ('259',348,'288',1,3), ('259',348,'320',1,3), ('259',348,'202',1,3)
+ERROR - 2018-01-25 12:11:20 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:14:28 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:17:06 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:18:24 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:19:56 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:23:39 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "337" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:24:26 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:25:38 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:26:56 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "337" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:28:31 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 12:32:44 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',349,'259',1,1), ('259',349,'343',1,3), ('259',349,'288',1,3)
+ERROR - 2018-01-25 12:32:45 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',350,'259',1,1), ('259',350,'343',1,3), ('259',350,'288',1,3)
+ERROR - 2018-01-25 12:32:51 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',351,'259',1,1), ('259',351,'343',1,3), ('259',351,'288',1,3)
+ERROR - 2018-01-25 12:32:52 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',352,'259',1,1), ('259',352,'343',1,3), ('259',352,'288',1,3)
+ERROR - 2018-01-25 12:32:54 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',353,'259',1,1), ('259',353,'343',1,3), ('259',353,'288',1,3)
+ERROR - 2018-01-25 12:33:07 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',354,'259',1,1), ('259',354,'306',1,3), ('259',354,'355',1,3), ('259',354,'202',1,3)
+ERROR - 2018-01-25 12:33:09 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',355,'259',1,1), ('259',355,'306',1,3), ('259',355,'355',1,3), ('259',355,'202',1,3)
+ERROR - 2018-01-25 12:33:10 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',356,'259',1,1), ('259',356,'306',1,3), ('259',356,'355',1,3), ('259',356,'202',1,3)
+ERROR - 2018-01-25 12:33:11 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',357,'259',1,1), ('259',357,'306',1,3), ('259',357,'355',1,3), ('259',357,'202',1,3)
+ERROR - 2018-01-25 12:33:12 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',358,'259',1,1), ('259',358,'306',1,3), ('259',358,'355',1,3), ('259',358,'202',1,3)
+ERROR - 2018-01-25 12:33:13 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('259',359,'259',1,1), ('259',359,'306',1,3), ('259',359,'355',1,3), ('259',359,'202',1,3)
+ERROR - 2018-01-25 12:34:22 --> Query error: Unknown column 'user_role' in 'field list' - Invalid query: INSERT INTO `ct_group_members` (`added_by`, `chat_group_id`, `group_member_id`, `group_members_status`, `user_role`) VALUES ('209',360,'209',1,1), ('209',360,'210',1,3), ('209',360,'212',1,3), ('209',360,'213',1,3)
+ERROR - 2018-01-25 12:34:29 --> Query error: Unknown column 'gm.user_role' in 'field list' - Invalid query: SELECT `u`.`user_fullname`, `u`.`user_name`, `gm`.`user_role`, `g`.`chat_group_id`, `g`.`chat_group_admin_id`, `g`.`chat_group_name`, `g`.`chat_group_theme`, `g`.`chat_group_status`, `g`.`chat_group_updated_date`, `g`.`chat_group_created_date`
+FROM `ct_group_members` `gm`
+INNER JOIN `ct_chat_group` `g` ON `gm`.`chat_group_id`=`g`.`chat_group_id` AND `g`.`chat_group_status`=1
+INNER JOIN `ct_users` `u` ON `g`.`chat_group_admin_id`=`u`.`users_id`
+WHERE (`gm`.`group_member_id` = "303" AND `gm`.`group_members_status` = 1)
+ERROR - 2018-01-25 18:47:43 --> Severity: Notice --> Undefined index: game_hangman_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Game_model.php 177
+ERROR - 2018-01-25 18:47:43 --> Severity: Notice --> Undefined index: game_hangman_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Game_model.php 181
+ERROR - 2018-01-25 18:47:43 --> Severity: Notice --> Undefined index: original_word /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Game_model.php 181
+ERROR - 2018-01-25 18:47:43 --> Severity: Notice --> Undefined index: recent_word /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Game_model.php 181
+ERROR - 2018-01-25 18:47:43 --> Severity: Notice --> Undefined index: live_word /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Game_model.php 181
+ERROR - 2018-01-25 18:47:43 --> Severity: Notice --> Undefined index: hint /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Game_model.php 181
+ERROR - 2018-01-25 18:47:43 --> Query error: Column 'game_hangman_id' cannot be null - Invalid query: INSERT INTO `ct_hangman_notifications` (`game_hangman_id`, `original_word`, `recent_word`, `live_word`, `hint`) VALUES (NULL, NULL, NULL, NULL, NULL)
+ERROR - 2018-01-25 18:47:43 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_system/core/Exceptions.php:271) /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_system/core/Common.php 564

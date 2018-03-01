@@ -1,0 +1,1 @@
+Date_time : 2018-02-08 10:21:46 --> Status : FALSE --> Device Token : e59-OR_BK_c:APA91bHWcWvaDGusDgyKDMbcFBolk6YE7sIoWtm6DH_pJ0xqn0fxuEeoJAmqghQ1aSAd8wFP1NGpLo5sIAPvYHrLFGC8ZEvgJX0ki_WVhsbx_9oAMUEAsAgzLFVn2d93aoT9f32klXcH --> User ID : 254 -->  Error Message : NotRegistered

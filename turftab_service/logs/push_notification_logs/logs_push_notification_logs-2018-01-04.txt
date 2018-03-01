@@ -1,0 +1,11 @@
+Date_time : 2018-01-04 17:21:50 --> Status : FALSE --> Device Token : fsdfsgsfsdfvcf34dfv --> User ID : 210 --> Event ID : 15 --> Error Message : InvalidRegistration
+Date_time : 2018-01-04 17:21:50 --> Status : FALSE --> Device Token : fsdfsrfasdfadfsfvcf34dfv --> User ID : 212 --> Event ID : 15 --> Error Message : InvalidRegistration
+Date_time : 2018-01-04 17:21:50 --> Status : FALSE --> Device Token : fsdfsrfsadrerdcfsfvcf34dfv --> User ID : 213 --> Event ID : 15 --> Error Message : InvalidRegistration
+Date_time : 2018-01-04 17:22:02 --> Status : FALSE --> Device Token : fsdfsgsfsdfvcf34dfv --> User ID : 210 --> Event ID : 16 --> Error Message : InvalidRegistration
+Date_time : 2018-01-04 17:22:02 --> Status : FALSE --> Device Token : fsdfsrfasdfadfsfvcf34dfv --> User ID : 212 --> Event ID : 16 --> Error Message : InvalidRegistration
+Date_time : 2018-01-04 17:22:02 --> Status : FALSE --> Device Token : fsdfsrfsadrerdcfsfvcf34dfv --> User ID : 213 --> Event ID : 16 --> Error Message : InvalidRegistration
+Date_time : 2018-01-04 17:23:51 --> Status : FALSE --> Device Token : fsdfsgsfsdfvcf34dfv --> User ID : 210 --> Event ID : 18 --> Error Message : InvalidRegistration
+Date_time : 2018-01-04 17:23:51 --> Status : FALSE --> Device Token : fsdfsrfasdfadfsfvcf34dfv --> User ID : 212 --> Event ID : 18 --> Error Message : InvalidRegistration
+Date_time : 2018-01-04 17:23:51 --> Status : FALSE --> Device Token : fsdfsrfsadrerdcfsfvcf34dfv --> User ID : 213 --> Event ID : 18 --> Error Message : InvalidRegistration
+Date_time : 2018-01-04 18:17:02 --> Status : FALSE --> Device Token : eMh98gCo7ec:APA91bH6vks6HUrxuJCCfKQb-I_cUPz0ijhczsUpINREYwREvy5YCa0O7bit0NwCjsy6YTK_yJsldxgjbIaGJNlNy_o0ptE_hycKzHHZkctBpGMwXwZPEmO76rpo7MfWZc5LqX8U7h1F --> User ID : 259 --> Event ID : 23 --> Error Message : NotRegistered
+Date_time : 2018-01-04 19:46:09 --> Status : FALSE --> Device Token : eMh98gCo7ec:APA91bH6vks6HUrxuJCCfKQb-I_cUPz0ijhczsUpINREYwREvy5YCa0O7bit0NwCjsy6YTK_yJsldxgjbIaGJNlNy_o0ptE_hycKzHHZkctBpGMwXwZPEmO76rpo7MfWZc5LqX8U7h1F --> User ID : 259 --> Event ID : 31 --> Error Message : NotRegistered

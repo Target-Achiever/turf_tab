@@ -1,0 +1,4 @@
+Date_time : 2017-12-14 14:27:18 --> Status : FALSE --> Device Token : fsdfsgsfsdfvcf34dfv --> User ID : 210 -->  Error Message : InvalidRegistration
+Date_time : 2017-12-14 14:40:01 --> Status : FALSE --> Device Token : fsdfsr3rdfsr32txvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration
+Date_time : 2017-12-14 14:41:37 --> Status : FALSE --> Device Token : fsdfsgsfsdfvcf34dfv --> User ID : 210 -->  Error Message : InvalidRegistration
+Date_time : 2017-12-14 14:42:48 --> Status : FALSE --> Device Token : fsdfsr3rdfsr32txvcf34dfv --> User ID : 209 -->  Error Message : InvalidRegistration

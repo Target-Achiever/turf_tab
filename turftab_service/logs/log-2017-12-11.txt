@@ -1,0 +1,27 @@
+ERROR - 2017-12-11 09:56:13 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 461
+ERROR - 2017-12-11 10:13:32 --> Query error: Unknown column 'reviews_type' in 'field list' - Invalid query: INSERT INTO `ct_notifications` (`notifications_from_id`, `notifications_to_id`, `notifications_msg`, `notifications_event_id`, `reviews_type`, `notifications_type`, `notifications_status`) VALUES ('210', '209', 'has posted review on your event', '107', '1', 'event_review', 1)
+ERROR - 2017-12-11 12:53:06 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 12:53:14 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 12:57:18 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 13:48:15 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 14:47:02 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 14:47:02 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 236
+ERROR - 2017-12-11 14:51:15 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 14:51:15 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 236
+ERROR - 2017-12-11 14:52:34 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 14:52:34 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 236
+ERROR - 2017-12-11 14:53:29 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 14:53:29 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 236
+ERROR - 2017-12-11 15:04:44 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 15:04:44 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 236
+ERROR - 2017-12-11 15:52:13 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 221
+ERROR - 2017-12-11 18:37:28 --> Severity: Parsing Error --> syntax error, unexpected '$this' (T_VARIABLE) /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Notification_model.php 56
+ERROR - 2017-12-11 18:37:42 --> Severity: Parsing Error --> syntax error, unexpected '$this' (T_VARIABLE) /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/Notification_model.php 56
+ERROR - 2017-12-11 20:12:28 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 223
+ERROR - 2017-12-11 20:12:28 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 238
+ERROR - 2017-12-11 20:23:31 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 223
+ERROR - 2017-12-11 20:23:31 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 238
+ERROR - 2017-12-11 20:24:41 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 223
+ERROR - 2017-12-11 20:24:41 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 238
+ERROR - 2017-12-11 20:25:00 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 223
+ERROR - 2017-12-11 20:25:00 --> Severity: Notice --> Undefined index: event_id /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Review.php 238

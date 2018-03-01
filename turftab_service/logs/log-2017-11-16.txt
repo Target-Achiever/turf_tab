@@ -1,0 +1,15 @@
+ERROR - 2017-11-16 11:50:21 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 461
+ERROR - 2017-11-16 11:50:21 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 465
+ERROR - 2017-11-16 11:50:21 --> Severity: Notice --> Undefined index: user_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/User_model.php 150
+ERROR - 2017-11-16 11:50:32 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 461
+ERROR - 2017-11-16 11:50:32 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 465
+ERROR - 2017-11-16 11:50:32 --> Severity: Notice --> Undefined index: user_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/User_model.php 150
+ERROR - 2017-11-16 11:50:39 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 461
+ERROR - 2017-11-16 11:50:39 --> Severity: Notice --> Undefined index: user_email_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/User.php 465
+ERROR - 2017-11-16 11:50:39 --> Severity: Notice --> Undefined index: user_mobile /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/models/User_model.php 150
+ERROR - 2017-11-16 11:51:58 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 435
+ERROR - 2017-11-16 11:52:25 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 435
+ERROR - 2017-11-16 11:59:15 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 396
+ERROR - 2017-11-16 17:10:56 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 435
+ERROR - 2017-11-16 17:11:00 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Profile.php 435
+ERROR - 2017-11-16 17:36:15 --> Severity: Notice --> Undefined index: loggedin_user_name /var/www/vhosts/gpsservice.pickzy.com/tempserver/turf_tab/turftab_service/controllers/Event.php 44

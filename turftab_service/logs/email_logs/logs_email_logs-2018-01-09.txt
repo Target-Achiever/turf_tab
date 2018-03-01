@@ -1,0 +1,2 @@
+Date_time : 2018-01-09 18:07:32 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : nokia@live.com
+Date_time : 2018-01-09 18:08:56 --> Status : TRUE --> From_mail : sivaramakannan.s@pickzy.com --> To_mail : apple@live.com
