@@ -187,4 +187,14 @@ class Game_model extends CI_Model {
         return TRUE;
     }
 
+    /* =============       Get hangman status        ============== */
+    public function get_hangman_status($game_id) {
+
+        $model_data = array();
+
+        $model_data = $this->db->select('game_hangman_id,original_word,recent_word,live_word,hint')->get_where('ct_hangman_notifications',array('game_hangman_id'=>$game_id))->row_array();
+
+        return $model_data;
+    }    
+
 } // End game model

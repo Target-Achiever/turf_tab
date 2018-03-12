@@ -183,6 +183,7 @@ $route['expire'] = 'expire/user_expire';
 $route['game_hangman'] = 'game/user_game_hangman';
 $route['hangman_notification'] = 'game/user_hangman_notification';
 $route['game_tictactoe'] = 'game/user_game_tictactoe';
+$route['hangman_status'] = 'game/user_hangman_status';
 
 
 // Tictactoe action routes

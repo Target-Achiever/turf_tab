@@ -97,6 +97,7 @@ class User_model extends CI_Model {
 	{
 		$model_data_count = $this->db->get_where('ct_user_logs',array('users_id'=>$user_id))->num_rows();
 		if($model_data_count == 0) {
+			$this->default_user_settings($user_id);
 			$data['users_id'] = $user_id;
 			$data['logs_login_count'] = 1;
 			$model_data = $this->insert_userlogs($data);

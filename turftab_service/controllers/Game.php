@@ -77,9 +77,35 @@ class Game extends CI_Controller {
 	   		}
 	   		else if($data['api_action'] == "details") {
 
+	   			
 	   			$hangman_details = $this->game_model->hangman_details($data['game_hangman_id']);
 
+	   			//=====user data for push notification
+	   			$user_id = $hangman_details['from_users_id'];//game requester device info 
+  				$user_device_details = $this->game_model->get_users_device_details($user_id);
+
 	   			if(!empty($hangman_details)) {
+
+	   				// Save notifications
+					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $hangman_details['from_users_id'],'notifications_msg'=> "Game started.",'notifications_type'=> "game_hangman", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
+				// $save_notifications = $this->game_model->save_notifications($notification_data);
+	   			//===============================
+
+	   				$user_device_type = ($user_device_details['logs_device_type'] == 1) ? "android" : "ios";
+  					$user_device_token = array($user_device_details['logs_device_token']);
+  					
+
+	   				//======================================send notification 
+	   				$msg = array (
+										'title' => "You have a new notification.",
+										'message' => " started the game.",
+										'notifications_type' => "game_hangman",
+										'notifications_id' => $save_notifications['insert_id'],
+										'notifications_from_id' => $data['users_id'],
+										'notifications_event_id' => $data['game_hangman_id']
+										);
+	  						$send_notification = $this->common->single_push_notification_service($user_device_type,$user_device_token,$msg,$data['users_id']);
+	   				//=======================================================
 	   				$response = array("status"=>"true","status_code"=>"200","server_data"=>$hangman_details,"message"=>"Listed successfully");
 	   			}
 	   			else {
@@ -99,7 +125,7 @@ class Game extends CI_Controller {
   						$user_device_details = $this->game_model->get_users_device_details($user_id);
 
 	  					// Save notifications
-	  					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $data['friend_id'],'notifications_msg'=> "has completed your hangman task.",'notifications_type'=> "game_hangman", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
+	  					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $data['friend_id'],'notifications_msg'=> "has completed your hangman task.",'notifications_type'=> "hangman_completed", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
 	  					$save_notifications = $this->game_model->save_notifications($notification_data);
 
   						if(!empty($user_device_details)) {
@@ -111,7 +137,7 @@ class Game extends CI_Controller {
 				  				$msg = array (
 											'title' => "You have a new notification.",
 											'message' => $user_name." has completed your hangman task.",
-											'notifications_type' => "game_hangman",
+											'notifications_type' => "hangman_completed",
 											'notifications_id' => $save_notifications['insert_id'],
 											'notifications_from_id' => $data['users_id'],
 											'notifications_event_id' => $data['game_hangman_id']
@@ -286,39 +312,57 @@ class Game extends CI_Controller {
 
 			$update_hangman_data = $this->game_model->update_hangman_notification($data);
 
-			//	push notification
-  			$user_id = $data['friend_id'];
-  			$user_device_details = $this->game_model->get_users_device_details($user_id);
-  			$recent_letter = $data['recent_letter'];
-  			$letter_action = $data['letter_action'];
+			// //	push notification
+  	// 		$user_id = $data['friend_id'];
+  	// 		$user_device_details = $this->game_model->get_users_device_details($user_id);
+  	// 		$recent_letter = $data['recent_letter'];
+  	// 		$letter_action = $data['letter_action'];
 
-  			// Save notifications
-  			$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $data['friend_id'],'notifications_msg'=> "found the letter '$recent_letter' as $letter_action.",'notifications_type'=> "hangman_notification", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
-			$save_notifications = $this->game_model->save_notifications($notification_data);
+  	// 		// Save notifications
+  	// 		$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $data['friend_id'],'notifications_msg'=> "found the letter '$recent_letter' as $letter_action.",'notifications_type'=> "hangman_notification", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
+			// $save_notifications = $this->game_model->save_notifications($notification_data);
 
-			if(!empty($user_device_details)) {
+			// if(!empty($user_device_details)) {
 
-				$user_device_type = ($user_device_details['logs_device_type'] == 1) ? "android" : "ios";
-				$user_device_token = array($user_device_details['logs_device_token']);
+			// 	$user_device_type = ($user_device_details['logs_device_type'] == 1) ? "android" : "ios";
+			// 	$user_device_token = array($user_device_details['logs_device_token']);
 
-				if(!empty($user_device_token)) {
-	  				$msg = array (
-								'title' => "You have a new notification.",
-								'message' => $user_name." found the letter '$recent_letter' as $letter_action.",
-								'notifications_type' => "hangman_notification",
-								'notifications_id' => $save_notifications['insert_id'],
-								'notifications_from_id' => $data['users_id'],
-								'notifications_event_id' => $data['game_hangman_id'],
-								'recent_word' => $data['recent_word'],
-								'original_word' => $data['original_word'],
-								'live_word' => $data['live_word'],
-								'hint' => $data['hint'],
-								);
-					$send_notification = $this->common->single_push_notification_service($user_device_type,$user_device_token,$msg,$data['friend_id']);
-				}
-			}
+			// 	if(!empty($user_device_token)) {
+	  // 				$msg = array (
+			// 					'title' => "You have a new notification.",
+			// 					'message' => $user_name." found the letter '$recent_letter' as $letter_action.",
+			// 					'notifications_type' => "hangman_notification",
+			// 					'notifications_id' => $save_notifications['insert_id'],
+			// 					'notifications_from_id' => $data['users_id'],
+			// 					'notifications_event_id' => $data['game_hangman_id'],
+			// 					'recent_word' => $data['recent_word'],
+			// 					'original_word' => $data['original_word'],
+			// 					'live_word' => $data['live_word'],
+			// 					'hint' => $data['hint'],
+			// 					);
+			// 		$send_notification = $this->common->single_push_notification_service($user_device_type,$user_device_token,$msg,$data['friend_id']);
+			// 	}
+			// }
     				
-			$response = array("status"=>"true","status_code"=>"200","message"=>"Notification has been sent successfully");
+			// $response = array("status"=>"true","status_code"=>"200","message"=>"Notification has been sent successfully");
+			$response = array("status"=>"true","status_code"=>"200","message"=>"Updated successfully");
+   		}
+ 		else {
+			$response = array("status"=>"false","status_code"=>"404","message"=>"Fields must not be Empty");
+		}
+		echo json_encode($response);
+	}
+
+	/* ============         Hangman game status         =========== */
+	public function user_hangman_status() {
+
+		$data = json_decode(file_get_contents("php://input"),true);		
+
+		if(!empty($data)) {
+
+			$hangman_data = $this->game_model->get_hangman_status($data['game_hangman_id']);
+
+			$response = array("status"=>"true","status_code"=>"200","server_data"=>$hangman_data,"message"=>"Listed successfully");
    		}
  		else {
 			$response = array("status"=>"false","status_code"=>"404","message"=>"Fields must not be Empty");

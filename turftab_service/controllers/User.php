@@ -14,7 +14,8 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		echo "welcome";
+		// echo "welcome";
+		$this->load->view('tictactoe');
 	}
 
 	/* ============        Signup         ============= */
@@ -87,7 +88,7 @@ class User extends CI_Controller {
 
 				if($result['status'] == "true") {
 
-					$insert_settings = $this->user_model->default_user_settings($result['insert_id']);
+					// $insert_settings = $this->user_model->default_user_settings($result['insert_id']);
 
 					if(!empty($data['user_email'])) {
 
@@ -288,7 +289,7 @@ class User extends CI_Controller {
 				
 				if($signin_verify['user_status'] == 3) {
 
-					$response = array("status"=>"false","status_code"=>"400","message"=>"Your account deactivated by admin");
+					$response = array("status"=>"false","status_code"=>"400","message"=>"Your account has been deactivated by admin");
 					echo json_encode($response);
 					exit;
 				}

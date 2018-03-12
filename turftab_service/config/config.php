@@ -30,7 +30,7 @@ date_default_timezone_set('Asia/Kolkata');
 
 /* =========    Default Timezone End       ================ */
 
-$config['base_url'] = 'http://temp1.pickzy.com/turf_tab/'; // Server
+$config['base_url'] = 'http://localhost/turf_tab/'; // Server
 
 // $config['base_url'] = 'http://localhost/turt_tab/';  // Local
 
