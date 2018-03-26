@@ -16,39 +16,73 @@ class Referral_model extends CI_Model {
         return $record_count;
     }
 
-    /* ===========     To check whether the user already have referral code or not     ======= */
-    public function check_user_referral($user_id)
+    /* ===========    To check whether the user submitted the referral code or not    ======= */
+    public function check_device_user($user_id,$device_id,$ref_code)
     {
 
-        $model_data_count = $this->db->get_where('ct_referral',array('users_id'=>$user_id))->num_rows();
+        $where_cond = '(users_id="'.$user_id.'" OR login_device_id="'.$device_id.'")';
 
-        return $model_data_count;       
+        $model_data_count = $this->db->get_where('ct_referral',$where_cond)->num_rows();
+
+        if($model_data_count == 0) {
+
+            $check_same_user_referral = $this->db->get_where('ct_user_credits',array('users_id'=>$user_id,'user_referral_code'=>$ref_code))->num_rows();
+
+            if($check_same_user_referral == 1) {
+                return FALSE;
+            }
+            else {
+                return TRUE;
+            }
+        }
+        else {
+            return FALSE;
+        }
     }
 
     /* ===========     Referral code and referral bonus proccess     ======= */
     public function user_referral($data)
     {
 
-        $data['referred_by'] = '';
 
-        // To check whether the app already installed or not in the device
-        $device_det = $this->db->get_where('ct_login_devices',array('device_id'=>$data['device_id']))->num_rows();
+        $referred_by_user = $this->db->select('users_id')->get_where('ct_user_credits',array('user_referral_code'=>$data['referral_code']))->row_array();
 
-        if($device_det == 0) {
+        if(!empty($referred_by_user['users_id'])) {
 
-            $ref_det = $this->db->select('users_id')->get_where('ct_referral',array('referral_code'=>$data['referral_code']))->row_array();
-
-            $data['referred_by'] = (!empty($ref_det['users_id'])) ? $ref_det['users_id'] : '';
-           
-            // Insert device id
-            $insert_device_det = $this->db->insert('ct_login_devices',array('device_id'=>$data['device_id'],'users_id'=>$data['users_id']));
+            $insert_data = array('users_id'=>$data['users_id'],'referred_by'=>$referred_by_user['users_id'],'login_device_id'=>$data['login_device_id'],'referral_status'=>1);
+            $insert_user_referral = $this->db->insert('ct_referral',$insert_data);
+            $model_data['status'] = "true";
+            $model_data['referred_user'] = $referred_by_user['users_id'];
+        }
+        else {
+            $model_data['status'] = "false";   
         }
         
-        $insert_data = array('users_id'=>$data['users_id'],'referral_code'=>$data['new_ref_code'],'referred_by'=>$data['referred_by'],'referral_status'=>1);
-        // Insert referral code
-        $insert_user_referral = $this->db->insert('ct_referral',$insert_data);
+        return $model_data;
+    }
 
-        return TRUE;       
+    /* =============       Fetch user device token        ============== */
+    public function get_users_device_details($user_id) {
+
+        $where_cond = '(logs_login_status=1 AND users_id ="'.$user_id.'")';
+        $user_device_details = $this->db->select('logs_device_type,logs_device_token')->from('ct_user_logs')->where($where_cond)->get()->row_array();
+        return $user_device_details;
+    }
+
+    /* ===========         Save notifications    ======= */
+    public function save_notifications($data)
+    {
+
+        $insert_data = $this->db->insert('ct_notifications',$data);
+
+        if($insert_data) {
+            $model_data['insert_id'] = $this->db->insert_id();
+        }
+        else {
+            $model_data['insert_id'] = '';
+        }
+
+        return $model_data;
     }
 
     /* ===========     User referral credits     ======= */
@@ -72,12 +106,8 @@ class Referral_model extends CI_Model {
             $update_credits = $this->db->where('users_id',$data['users_id'])->set('redeem_credits','redeem_credits+'.$quotient.'',false)->set('total_credits','total_credits+'.$quotient.'',false)->update('ct_user_credits');
         }
 
-        $this->db->select('c.user_like_total,c.user_multimedia_total,c.redeem_credits,c.total_credits,r.referral_code');
-        $this->db->from('ct_user_credits c');
-        $this->db->join('ct_referral r','r.users_id=c.users_id','inner');
-        $this->db->where('c.users_id',$data['users_id']);
-        $model_data =  $this->db->get()->row_array();
-
+        $model_data = $this->db->select('user_like_total,user_multimedia_total,redeem_credits,total_credits,user_referral_code,(select count(r.referral_id) from ct_referral r where r.referred_by="'.$data['users_id'].'" ) as total_referrals')->get_where('ct_user_credits',array('users_id'=>$data['users_id']))->row_array();
+   
         return $model_data;       
     }
 

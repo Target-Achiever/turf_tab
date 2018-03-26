@@ -91,18 +91,55 @@ class Turfmate_model extends CI_Model {
         $model_data['status'] = "";
 
         if($already_answered_count == 0) {
-            
+
+            $insert_data = array();
+            $turfmate_profile_data = array();
+
             $user_id = $data['users_id'];
-            $answers_list = array_map(function($arr) use($user_id) { return $arr+['users_id'=>$user_id]; },$answers_list);
-            $insert_data = $this->db->insert_batch('ct_turfmates_matching',$answers_list);
+
+            foreach ($answers_list as $key => $value) {
+
+                $value['users_id'] = $user_id;
+                $insert_data[] = $value;
+
+                if($value['question_id'] == 2 || $value['question_id'] == 3 || $value['question_id'] == 5) 
+                {
+                    $turfmate_profile_data[$value['question_id']] = $value['answer_id'];
+                }
+                
+            }
+         
+            // $answers_list = array_map(function($arr) use($user_id) { return $arr+['users_id'=>$user_id]; },$answers_list);
+
+            $insert_data = $this->db->insert_batch('ct_turfmates_matching',$insert_data);
+
+            if(!empty($turfmate_profile_data)) {
+
+                $update_user_data = $this->db->where('users_id',$user_id)->update('ct_users',array('user_ethnicity'=>$turfmate_profile_data[2],'user_sexual'=>$turfmate_profile_data[5],'user_religion'=>$turfmate_profile_data[3]));
+            }
+
             $model_data['status'] = "true";
         }
         else {
+
+            $turfmate_profile_data = array();
+
             foreach ($answers_list as $key => $value) {
 
                 $where_cond = '(users_id="'.$data['users_id'].'" AND question_id="'.$value['question_id'].'")';
                 $update_answers_data = $this->db->where($where_cond)->update('ct_turfmates_matching',array('answer_id'=>$value['answer_id']));
+
+                if($value['question_id'] == 2 || $value['question_id'] == 3 || $value['question_id'] == 5) 
+                {
+                    $turfmate_profile_data[$value['question_id']] = $value['answer_id'];
+                }
+                
                 $model_data['status'] = "true";
+            }
+
+            if(!empty($turfmate_profile_data)) {
+
+                $update_user_data = $this->db->where('users_id',$data['users_id'])->update('ct_users',array('user_ethnicity'=>$turfmate_profile_data[2],'user_sexual'=>$turfmate_profile_data[5],'user_religion'=>$turfmate_profile_data[3]));
             }
         }
 
@@ -143,7 +180,7 @@ class Turfmate_model extends CI_Model {
     public function user_turfmate_profile($data) {
 
         $model_data = array();
-        $this->db->select('u.users_id as user_id,IFNULL(u.user_fullname,"") as user_fullname,IFNULL(u.user_name,"") as user_name,IFNULL(u.user_country_code,"") as user_country_code,IFNULL(u.user_email,"") as user_email,IFNULL(u.user_mobile,"") as user_mobile,IFNULL(u.user_gender,"") as user_gender,IFNULL(u.user_dob,"") as user_dob,IFNULL(u.user_turfmate_image,"") as user_turfmate_image,IFNULL(u.user_description,"") as user_description,u.user_register_type,u.user_profile_updated_date,u.user_profile_created_date,a.albums_id,a.albums_path,a.file_type');  
+        $this->db->select('u.users_id as user_id,IFNULL(u.user_fullname,"") as user_fullname,IFNULL(u.user_name,"") as user_name,IFNULL(u.user_country_code,"") as user_country_code,IFNULL(u.user_email,"") as user_email,IFNULL(u.user_mobile,"") as user_mobile,IFNULL(u.user_gender,"") as user_gender,IFNULL(u.user_dob,"") as user_dob,IFNULL(u.user_turfmate_image,"") as user_turfmate_image,IFNULL(u.user_description,"") as user_description,IFNULL(u.user_ethnicity,"")as user_ethnicity,IFNULL(u.user_sexual,"") user_sexual,IFNULL(u.user_religion,"") user_religion,IFNULL(u.user_hobbies,"") user_hobbies,u.user_register_type,u.user_profile_updated_date,u.user_profile_created_date,a.albums_id,a.albums_path,a.file_type');  
         $this->db->from('ct_users u');
         $this->db->join('ct_albums a','u.users_id=a.users_id AND a.album_type=2 AND a.albums_status=1','left');
         $this->db->where('u.users_id',$data['users_id']);
@@ -156,6 +193,16 @@ class Turfmate_model extends CI_Model {
     public function user_turfmate_profile_update($data,$user_id) {
 
         $model_data = $this->db->where('users_id',$user_id)->update('ct_users',$data);
+
+        $turfmate_user_count = $this->db->get_where('ct_turfmates_matching',array('users_id'=>$user_id))->num_rows();
+
+        if($turfmate_user_count != 0) {
+
+            $update_data = $this->db->where(array('users_id'=>$user_id,'question_id'=>2))->update('ct_turfmates_matching',array('answer_id'=>$data['user_ethnicity']));
+            $update_data = $this->db->where(array('users_id'=>$user_id,'question_id'=>3))->update('ct_turfmates_matching',array('answer_id'=>$data['user_religion']));
+            $update_data = $this->db->where(array('users_id'=>$user_id,'question_id'=>5))->update('ct_turfmates_matching',array('answer_id'=>$data['user_sexual']));
+        }
+
         return TRUE;
     }
 
@@ -168,6 +215,13 @@ class Turfmate_model extends CI_Model {
             return "success";
        }
        else {
+
+            // Remove restriction for admin user
+            $super_user_data = $this->db->get_where('ct_users',array('users_id'=>$user_id,'user_type'=>2))->num_rows();
+
+            if($super_user_data == 1) {
+                return "success";
+            }
 
             $user_action_count = 0;
 
@@ -383,6 +437,33 @@ class Turfmate_model extends CI_Model {
         return $model_data;
     }
 
+    /* =============       Turfmate matched user list       ============== */
+    public function user_turfmate_matchedlist($user_id) {
 
+        $model_data['turfmate_matched'] = array();
+        $model_data['both_matched'] = array();
+
+        $where_cond = '((sender_id="'.$user_id.'" OR receiver_id="'.$user_id.'") AND like_status=2)';
+        // matched without friends
+        $model_data['turfmate_matched'] = $this->db->select('(CASE WHEN sender_id='.$user_id.' THEN receiver_id ELSE sender_id END) as user_id')->having('user_id NOT IN (select (CASE WHEN sender_id='.$user_id.' THEN receiver_id ELSE sender_id END) as user_id from ct_friends where (sender_id="'.$user_id.'" OR receiver_id="'.$user_id.'") AND friends_status=2)', NULL, FALSE)->get_where('ct_turfmates',$where_cond)->result_array();
+    
+        // matched with friends only
+        $model_data['both_matched'] = $this->db->select('(CASE WHEN sender_id='.$user_id.' THEN receiver_id ELSE sender_id END) as user_id')->having('user_id IN (select (CASE WHEN sender_id='.$user_id.' THEN receiver_id ELSE sender_id END) as user_id from ct_friends where (sender_id="'.$user_id.'" OR receiver_id="'.$user_id.'") AND friends_status=2)', NULL, FALSE)->get_where('ct_turfmates',$where_cond)->result_array();
+
+        return $model_data;
+    }
+
+    //========================== questions - ethnicity, religion and sexual ch-_-
+
+    public function user_turfmate_options()
+        {
+            $question_ids = array(2,3,5);
+            $this->db->select('options');
+            $this->db->from('ct_questions');
+            $this->db->where_in('questions_id', $question_ids);
+            $model_data=$this->db->get()->result_array();
+            
+            return $model_data;
+        }
    
 } // End turfmate model

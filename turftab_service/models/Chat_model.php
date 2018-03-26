@@ -451,7 +451,7 @@ class Chat_model extends CI_Model {
 		$user_id = $data['users_id'];
 
         $where_cond = '(lc.local_conversation_status=1 AND FIND_IN_SET("'.$user_id.'",lc.conversation_users) !=0)';
-        $this->db->select('u.users_id as user_id,u.user_fullname as user_name,u.user_profile_image as user_profile_image,s.profile_image_show,lc.local_conversation_id,lc.content,lc.content_type,lc.is_anonymous,lc.local_conversation_created_date,(CASE WHEN f.friends_status=2 THEN "true" ELSE "false" END) as friends_status,(select count(*) from ct_local_conversation as lcs where lcs.local_conversation_from_id="'.$user_id.'" AND lcs.local_conversation_status=1 AND (lcs.content_type=2 OR lcs.content_type=3 OR lcs.content_type=4 OR lcs.content_type=5)) as total_post_count');
+        $this->db->select('u.users_id as notifications_from_id,u.user_fullname as user_name,u.user_profile_image as user_profile_image,s.profile_image_show,lc.local_conversation_id,lc.content,lc.content_type,(CASE WHEN lc.is_anonymous=1 THEN "1" ELSE "2" END) as is_anonymous,lc.local_conversation_created_date,(CASE WHEN f.friends_status=2 THEN "true" ELSE "false" END) as friends_status');
         $this->db->from('ct_local_conversation lc');
         $this->db->join('ct_users u','lc.local_conversation_from_id=u.users_id','left');
         $this->db->join('ct_user_settings s','u.users_id=s.users_id','left');
@@ -461,7 +461,7 @@ class Chat_model extends CI_Model {
         $tempdb = clone $this->db;
         $model_data['total_count'] = $tempdb->get()->num_rows();
         $model_data['data'] = $message_data->limit($limit,$start)->get()->result_array();
-		
+	
 		return $model_data;
     }
 
@@ -567,36 +567,69 @@ class Chat_model extends CI_Model {
         }
         else {
 
-            $user_action_count = 0;
+            $super_user_data = $this->db->get_where('ct_users',array('users_id'=>$data['users_id'],'user_type'=>2))->num_rows();
 
-            $user_record = $this->db->select('user_multimedia_date,user_multimedia_post,user_multimedia_total')->get_where('ct_user_credits',array('users_id'=>$data['users_id']))->row_array();
-         
-            if(date('Y-m-d') == date('Y-m-d',strtotime($user_record['user_multimedia_date']))) {
-
-                if($user_record['user_multimedia_post'] > 0) {
-
-                    $user_action_count = $user_record['user_multimedia_post'];
-                    $update_user_data = $this->db->where('users_id',$data['users_id'])->set('user_multimedia_post','user_multimedia_post-1',FALSE)->update('ct_user_credits');
-                }
+            if($super_user_data == 1) {
+                
+                $model_data['status'] = "true";
+                $model_data['count'] = "unlimited";
             }
             else {
 
-                $user_action_count = $user_record['user_multimedia_total'];
-                $set_data = array('user_multimedia_date'=>date('Y-m-d H:i:s'));
-                $update_user_data = $this->db->where('users_id',$data['users_id'])->set('user_multimedia_post','user_multimedia_total-1',FALSE)->set($set_data)->update('ct_user_credits');
+                $user_action_count = 0;
+
+                $user_record = $this->db->select('user_multimedia_date,user_multimedia_post,user_multimedia_total')->get_where('ct_user_credits',array('users_id'=>$data['users_id']))->row_array();
+             
+                if(date('Y-m-d') == date('Y-m-d',strtotime($user_record['user_multimedia_date']))) 
+                {
+
+                    if($user_record['user_multimedia_post'] > 0) {
+
+                        $user_action_count = $user_record['user_multimedia_post'];
+                        $update_user_data = $this->db->where('users_id',$data['users_id'])->set('user_multimedia_post','user_multimedia_post-1',FALSE)->update('ct_user_credits');
+                    }
+                }
+                else {
+
+                    $user_action_count = $user_record['user_multimedia_total'];
+                    $set_data = array('user_multimedia_date'=>date('Y-m-d H:i:s'));
+                    $update_user_data = $this->db->where('users_id',$data['users_id'])->set('user_multimedia_post','user_multimedia_total-1',FALSE)->set($set_data)->update('ct_user_credits');
+                }
+                
+                $model_data['status'] = ($user_action_count > 0) ? "true" : "false";
+                $model_data['count'] = $user_action_count;
             }
-            
-            $model_data['status'] = ($user_action_count > 0) ? "true" : "false";
-            $model_data['count'] = $user_action_count;
         }
 
         return $model_data;
     }
 
     /* =============       Multimedia post       ============== */
-    public function user_multimedia_post($data) {
+    public function user_multimedia_post($user_id) {
 
-        $user_sub_data = $this->db->get_where('ct_subscription_activation',array('users_id'=>$data['users_id'],'subscription_type'=>2,'subscription_status'=>1))->row_array();
+        // $user_sub_data = $this->db->get_where('ct_subscription_activation',array('users_id'=>$data['users_id'],'subscription_type'=>2,'subscription_status'=>1))->row_array();
+        
+        // if(!empty($user_sub_data)) {
+
+        //     $model_data['count'] = "unlimited";          
+        // }
+        // else {
+
+        //     $user_record = $this->db->select('user_multimedia_date,user_multimedia_post,user_multimedia_total')->get_where('ct_user_credits',array('users_id'=>$data['users_id']))->row_array();
+         
+        //     if(date('Y-m-d') == date('Y-m-d',strtotime($user_record['user_multimedia_date']))) {
+
+        //         $model_data['count'] = $user_record['user_multimedia_post'];
+        //     }
+        //     else {
+
+        //         $model_data['count'] = $user_record['user_multimedia_total'];
+        //     }
+        // }
+
+        // return $model_data;
+
+        $user_sub_data = $this->db->get_where('ct_subscription_activation',array('users_id'=>$user_id,'subscription_type'=>2,'subscription_status'=>1))->row_array();
         
         if(!empty($user_sub_data)) {
 
@@ -604,7 +637,7 @@ class Chat_model extends CI_Model {
         }
         else {
 
-            $user_record = $this->db->select('user_multimedia_date,user_multimedia_post,user_multimedia_total')->get_where('ct_user_credits',array('users_id'=>$data['users_id']))->row_array();
+            $user_record = $this->db->select('user_multimedia_date,user_multimedia_post,user_multimedia_total')->get_where('ct_user_credits',array('users_id'=>$user_id))->row_array();
          
             if(date('Y-m-d') == date('Y-m-d',strtotime($user_record['user_multimedia_date']))) {
 
@@ -617,6 +650,13 @@ class Chat_model extends CI_Model {
         }
 
         return $model_data;
+    }
+
+    public function get_user_type($user_id) {
+
+        $model_data = $this->db->select('user_type')->get_where('ct_users',array('users_id'=>$user_id))->row_array();
+        $user_type = (!empty($model_data['user_type'])) ? $model_data['user_type'] : '1';
+        return $user_type;
     }
 
 

@@ -35,9 +35,16 @@ class Settings extends CI_Controller {
 
     		if($data['api_action'] == "view") {
 
+				$referral_credits = $this->settings_model->user_referral_credits($data);
+
+				$total_redeem = ($referral_credits['redeem_credits'] * 5) + $referral_credits['unused_referrals'];
+
     			$user_settings = $this->settings_model->user_settings_details($data);
 
 				if($user_settings['status'] == "true") {
+
+					$user_settings['data']['redeem'] = $total_redeem;
+					$user_settings['data']['user_referral_code'] = $referral_credits['user_referral_code'];
 
 					$response = array("status"=>"true","status_code"=>"200","server_data"=>$user_settings['data'],"message"=>"Listed successfully");
 				}

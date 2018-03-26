@@ -427,29 +427,44 @@ class Chat extends CI_Controller {
 				exit;
 			}
 
+			$user_type = $this->chat_model->get_user_type($data['users_id']);
+
 			$limit = 10;
 			$index = (!empty($data['index'])) ? $data['index'] : 1;
 			$start = ($index > 1) ? ($index-1) * $limit : 0;
 
 			$conversation = $this->chat_model->user_local_chat_conversation($data,$start,$limit);
-			$media_restriction = $this->chat_model->user_multimedia_post($data);
-			$media_count = (!empty($media_restriction['count']) ? $media_restriction['count'] : '');
+			$media_restriction = $this->chat_model->user_multimedia_post($data['users_id']);
+			$media_count = (!empty($media_restriction['count']) ? $media_restriction['count'] : '0');
 
 			$messages = (!empty($conversation['data'])) ? array_reverse($conversation['data']) : array();
 
 			if(!empty($messages)) {
-				
-				$total_post_count = $messages[0]['total_post_count'];
+			
 				// print_r($messages);
 				$messages_array = array_map( function (array $elem) {
-										unset($elem['total_post_count']);
+										
+										$media_url = $elem['content'];
+										$url_explode = explode('/',$media_url);
+										$file_name = end($url_explode);
+										$file_name_split = explode('.',$file_name);
+
+										if(!empty($file_name_split[1]) && $elem['content_type'] == 2) {
+											$elem['thumb'] = UPLOADS."chat_media/image/".$file_name_split[0]."_thumb.".$file_name_split[1];
+										}
+										else if(!empty($file_name_split[1]) && $elem['content_type'] == 3) {
+											$elem['thumb'] = UPLOADS."chat_media/video/".$file_name_split[0]."_thumb.png";		
+										}
+										else {
+											$elem['thumb'] = "";
+										}
 										return $elem;
 										},$messages);
 
-				$response = array("status"=>"true","status_code"=>"200","server_data"=>$messages_array,"total_count"=>$conversation['total_count'],"message"=>"Listed successfully","post_count"=>$media_count,"total_post_count"=>$total_post_count);
+				$response = array("status"=>"true","status_code"=>"200","server_data"=>$messages_array,"total_count"=>$conversation['total_count'],"message"=>"Listed successfully","post_count"=>$media_count,"user_type"=>$user_type);
 			}
 			else {
-				$response = array("status"=>"false","status_code"=>"400","message"=>"No record(s) found");
+				$response = array("status"=>"false","status_code"=>"400","message"=>"No record(s) found","user_type"=>$user_type,"post_count"=>$media_count);
 			}
 		}
 		else {
@@ -570,8 +585,10 @@ class Chat extends CI_Controller {
 								'notifications_from_id' => $data['local_conversation_from_id'],
 								'local_conversation_id' => $insert_message['insert_id'],
 								'content' => $data['content'],
+								'thumb' => $thumb_image,
 								'content_type' => $data['content_type'],
 								'user_name' => $user_name,
+								'local_conversation_created_date' => date('Y-m-d H:i:s'),
 								'user_profile_image' => $user_profile_image,
 								'profile_image_show' => (!empty($user_profile_data['profile_image_show']) ? $user_profile_data['profile_image_show'] : '')
 							);
@@ -580,9 +597,10 @@ class Chat extends CI_Controller {
 					}
 				}
 
-				$message_array[] = array('local_conversation_id'=>$insert_message['insert_id'],"thumb"=>$thumb_image,"content"=>$data['content'],"content_type"=>$data['content_type'],"user_id"=>$data['local_conversation_from_id'],"user_name"=>$user_name,"user_profile_image"=>$user_profile_image);
-
-				$media_count = (isset($media_restriction['count']) && $media_restriction['count'] !=0) ? $media_restriction['count'] : '';
+				$message_array[] = array('local_conversation_id'=>$insert_message['insert_id'],"thumb"=>$thumb_image,"content"=>$data['content'],"is_anonymous"=>$data['is_anonymous'],"content_type"=>$data['content_type'],"notifications_from_id"=>$data['local_conversation_from_id'],"user_name"=>$user_name,"user_profile_image"=>$user_profile_image,"local_conversation_created_date"=>date('Y-m-d H:i:s'));
+		
+				$media_restriction = $this->chat_model->user_multimedia_post($data['local_conversation_from_id']);
+				$media_count = (!empty($media_restriction['count']) ? $media_restriction['count'] : '0');
 
 				$response = array("status"=>"true","status_code"=>"200","server_data"=>$message_array,"message"=>"Message sent successfully","post_count"=>$media_count);
 			}

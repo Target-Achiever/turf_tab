@@ -85,7 +85,7 @@ class Event extends CI_Controller {
 				
 				if(!empty($user_ids)) {
 
-					$message = ($data['event_type'] == 1) ? "invited you privately to his event." : " created a new event.";
+					$message = ($data['event_type'] == 1) ? "has invited you to their private Event." : " created a new event.";
 					foreach ($user_ids as $uk => $uv) {
 						
 						// Save notifications
@@ -119,7 +119,7 @@ class Event extends CI_Controller {
 
 							$msg = array (
 								'title' => "You have a new notification.",
-								'message' => ($data['event_type'] == 1) ? $user_name." invited you privately to his event." : $user_name." created a new event.",
+								'message' => ($data['event_type'] == 1) ? $user_name." has invited you to their private Event." : $user_name." created a new event.",
 								'notifications_type' => "event_create",
 								'notifications_from_id' => $data['users_id'],
 								'notifications_event_id' => $event_data['insert_id']
@@ -188,7 +188,7 @@ class Event extends CI_Controller {
 					foreach ($user_ids as $uk => $uv) {
 					
 						// Save notifications
-						$notification_data[] = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $uv,'notifications_event_id'=> $event_id,'notifications_msg'=> "has been updated his event.",'notifications_type'=> "event_update" ,'notifications_status'=> 1);
+						$notification_data[] = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $uv,'notifications_event_id'=> $event_id,'notifications_msg'=> "has updated information on their event!",'notifications_type'=> "event_update" ,'notifications_status'=> 1);
 					}
 
 					$save_notifications = $this->event_model->save_notifications_batch($notification_data);
@@ -218,7 +218,7 @@ class Event extends CI_Controller {
 
 							$msg = array (
 								'title' => "You have a new notification.",
-								'message' =>  $user_name." has been updated his event.",
+								'message' =>  $user_name." has updated information on their event!",
 								'notifications_type' => "event_update",
 								'notifications_from_id' => $data['users_id'],
 								'notifications_event_id' => $event_id
@@ -232,7 +232,7 @@ class Event extends CI_Controller {
     			if(!empty($event_data['notification_ids'])) {
 
     				$user_ids = $event_data['notification_ids'];
-    				$message = ($data['event_type'] == 1) ? $user_name." invited you privately to his event." : "created a event and invited you.";
+    				$message = ($data['event_type'] == 1) ? $user_name." has invited you to their private Event." : "created a event and invited you.";
 
 					foreach ($user_ids as $uk => $uv) {
 					
@@ -267,7 +267,7 @@ class Event extends CI_Controller {
 
 							$msg = array (
 								'title' => "You have a new notification.",
-								'message' =>  ($data['event_type'] == 1) ? $user_name." invited you privately to his event." : "created a event and invited you.",
+								'message' =>  ($data['event_type'] == 1) ? $user_name." has invited you to their private Event." : "created a event and invited you.",
 								'notifications_type' => "event_update",
 								'notifications_from_id' => $data['users_id'],
 								'notifications_event_id' => $event_id
@@ -339,7 +339,7 @@ class Event extends CI_Controller {
   					$user_device_details = $this->event_model->get_users_device_details($user_id,"single");
 
   					// Save notifications
-  					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $user_id,'notifications_event_id'=> $data['event_id'],'notifications_msg'=> "interested on your event.",'notifications_type'=> "event_interested" ,'notifications_status'=> 1);
+  					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $user_id,'notifications_event_id'=> $data['event_id'],'notifications_msg'=> "will be attending your event!.",'notifications_type'=> "event_interested" ,'notifications_status'=> 1);
   					$save_notifications = $this->event_model->save_notifications($notification_data);
 
   					if(!empty($user_device_details)) {
@@ -350,7 +350,7 @@ class Event extends CI_Controller {
 		  				if(!empty($user_device_token)) {
 			  				$msg = array (
 											'title' => "You have a new notification.",
-											'message' => $user_name." interested on your event.",
+											'message' => $user_name." will be attending your event!.",
 											'notifications_type' => "event_interested",
 											'notifications_id' => $save_notifications['insert_id'],
 											'notifications_from_id' => $data['users_id'],

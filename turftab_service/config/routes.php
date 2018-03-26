@@ -109,6 +109,7 @@ $route['turfmate_userlist'] = 'turfmate/user_turfmate_userlist';
 $route['turfmate_profile'] = 'turfmate/user_turfmate_profile';
 $route['turfmate_album'] = 'turfmate/user_turfmate_album';
 $route['turfmate_invite'] = 'turfmate/user_turfmate_invite';
+$route['turfmate_matchist'] = 'turfmate/user_turfmate_matchist';
 
 /* ==============      Turfmate Controller End     ========= */
 
@@ -177,31 +178,45 @@ $route['expire'] = 'expire/user_expire';
 
 /* ==============      Chat Media End     ========= */
 
-
 /* ==============      Game Start     ========= */
 
 $route['game_hangman'] = 'game/user_game_hangman';
 $route['hangman_notification'] = 'game/user_hangman_notification';
-$route['game_tictactoe'] = 'game/user_game_tictactoe';
 $route['hangman_status'] = 'game/user_hangman_status';
-
+$route['game_tictactoe'] = 'game/user_game_tictactoe';
 
 // Tictactoe action routes
 $route['tictactoe_activities'] = 'tictactoe/user_tictactoe_activities';
 
 // ajax routes
 $route['game_update'] = 'tictactoe/user_game_update';
+$route['check_question_status'] = 'tictactoe/user_check_question_status';
+
+$route['check_question_raise'] = 'tictactoe/user_check_question_raise';
+$route['update_answer'] = 'tictactoe/user_update_answer';
+$route['answer_update_status'] = 'tictactoe/user_answer_update_status';
+$route['update_answer_validation'] = 'tictactoe/user_update_answer_validation';
+$route['answer_validate_status'] = 'tictactoe/user_answer_validate_status';
+$route['raise_multiple_question'] = 'tictactoe/user_raise_multiple_question';
+
+$route['update_question'] = 'tictactoe/user_update_question';
 $route['update_game_status'] = 'tictactoe/user_update_game_status';
 $route['game_end'] = 'tictactoe/user_game_end';
 
-
 /* ==============      Game End     ========= */
-
 
 /* ==============      Referral Bonus Start     ========= */
 
-$route['referral_initiate'] = 'referral/user_referral_initiate';
+$route['referral_submit'] = 'referral/user_referral_submit';
 $route['referral_credits'] = 'referral/user_referral_credits';
 $route['redeem_credits'] = 'referral/user_redeem_credits';
 
 /* ==============      Referral Bonus End     ========= */
+
+/* ==============      Xmpp Chat Start (single chat, group chat)     ========= */
+
+$route['xmpp_single_chat'] = 'xmpp_chat/user_xmpp_single_chat';
+$route['xmpp_single_getchat'] = 'xmpp_chat/user_xmpp_single_getchat';
+
+/* ==============      Xmpp Chat End (single chat, group chat)    ========= */
+

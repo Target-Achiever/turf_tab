@@ -251,6 +251,13 @@ class Turfmate extends CI_Controller {
 						}
     				}
 
+    				//-------------------------------------------------------questions
+    				$turfmate_questions = $this->turfmate_model->user_turfmate_options();
+    				$questions['ethnicity'] =  json_decode($turfmate_questions[0]['options'],true);
+    				$questions['religion'] =  json_decode($turfmate_questions[1]['options'],true);
+    				$questions['sexual'] =  json_decode($turfmate_questions[2]['options'],true);
+    				$user_profile_data = array_merge($user_profile_data,array("turfmate_options"=>$questions));
+    				//----------------------------------------------------------------
     				$response = array("status"=>"true","status_code"=>"200","server_data"=>$user_profile_data,"message"=>"Listed successfully");
 	    		}
 	    		else {
@@ -279,20 +286,24 @@ class Turfmate extends CI_Controller {
 						$file_path = str_replace("./", "", $filepath);
          			}
          			$update_data['user_turfmate_image'] = $file_path;
-         			// Delete original profile image
-         			if(!empty($data['pre_turfmate_image'])) {
-         				if(file_exists("./".$data['pre_turfmate_image'])) unlink("./".$data['pre_turfmate_image']);	
-         				// Delete thumbnail of profile image
-         				// $file_ext = ".".end((explode('.',$data['pre_turfmate_image'])));
-         				// $unlink_thumb = str_replace($file_ext, "_thumb$file_ext", $data['pre_turfmate_image']);
-         				// if(file_exists($unlink_thumb)) unlink($unlink_thumb);
-         			}
-         			$turfmate_profile_update = $this->turfmate_model->user_turfmate_profile_update($update_data,$data['users_id']);
-    				$response = array("status"=>"true","status_code"=>"200","message"=>"Updated successfully");
-	    		}
-	    		else {
-	    			$response = array("status"=>"false","status_code"=>"400","message"=>"Kindly upload turfmate profile image");
-	    		}
+         		}
+     			
+     			//=================================================2018-03-17
+     			$update_data['user_ethnicity'] = $data['user_ethnicity'];
+     			$update_data['user_sexual'] = $data['user_sexual'];
+     			$update_data['user_religion'] = $data['user_religion'];
+     			$update_data['user_hobbies'] = $data['user_hobbies'];
+     			//==============
+     			// Delete original profile image
+     			if(!empty($data['pre_turfmate_image'])) {
+     				if(file_exists("./".$data['pre_turfmate_image'])) unlink("./".$data['pre_turfmate_image']);	
+     				// Delete thumbnail of profile image
+     				// $file_ext = ".".end((explode('.',$data['pre_turfmate_image'])));
+     				// $unlink_thumb = str_replace($file_ext, "_thumb$file_ext", $data['pre_turfmate_image']);
+     				// if(file_exists($unlink_thumb)) unlink($unlink_thumb);
+     			}
+     			$turfmate_profile_update = $this->turfmate_model->user_turfmate_profile_update($update_data,$data['users_id']);
+				$response = array("status"=>"true","status_code"=>"200","message"=>"Updated successfully");
 	    	}
 	    	else{
 	    		$response = array("status"=>"false","status_code"=>"400","message"=>"Keyword mismatch");
@@ -475,7 +486,7 @@ class Turfmate extends CI_Controller {
 	  					$user_device_details = $this->turfmate_model->get_users_device_details($user_id);
 
 	  					// Save notifications
-	  					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $data['like_user_id'],'notifications_msg'=> " has accepted your turfmate request.",'notifications_type'=> "turfmate_request" ,'notifications_status'=> 1);
+	  					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $data['like_user_id'],'notifications_msg'=> " has matched with you, Dazzle away!.",'notifications_type'=> "turfmate_request" ,'notifications_status'=> 1);
 	  					$save_notifications = $this->turfmate_model->save_notifications($notification_data);
 
 	  					if(!empty($user_device_details)) {
@@ -486,7 +497,7 @@ class Turfmate extends CI_Controller {
 			  				if(!empty($user_device_token)) {
 				  				$msg = array (
 											'title' => "You have a new notification.",
-											'message' => $user_name." has accepted your turfmate request.",
+											'message' => $user_name." has matched with you, Dazzle away!.",
 											'notifications_type' => "turfmate_request",
 											'notifications_id' => $save_notifications['insert_id'],
 											'notifications_from_id' => $data['users_id'],
@@ -526,6 +537,43 @@ class Turfmate extends CI_Controller {
 		}
 		echo json_encode($response);    	
 	}
+
+	/* ============     Turfmate Matched List based on given user id    ===================== */
+	public function user_turfmate_matchist()
+	{
+
+		$data = json_decode(file_get_contents("php://input"),true);
+
+		if(!empty($data)) {
+
+			// Check login session
+			$unique_id_data['users_id'] = $data['users_id'];
+			$unique_id_data['unique_id'] = $data['unique_id'];
+			$unique_id_check = $this->turfmate_model->unique_id_verification($unique_id_data);
+			if($unique_id_check == 0) {
+				$response = array("status"=>"false","status_code"=>"301","message"=>"Session Expired");
+				echo json_encode($response);
+				exit;
+    		}
+
+    		$matched_user_data = $this->turfmate_model->user_turfmate_matchedlist($data['users_id']);
+
+    		if(!empty($matched_user_data)) {
+    			$response = array("status"=>"true","status_code"=>"200","server_data"=>$matched_user_data,"message"=>"Listed successfully");
+    		}
+    		else {
+    			$response = array("status"=>"false","status_code"=>"400","message"=>"No record(s) found");
+    		}
+	   	}
+    	else {
+			$response = array("status"=>"false","status_code"=>"404","message"=>"Fields must not be Empty");
+		}
+		echo json_encode($response); 
+	}
+
+	
+
+	
 
 	
 } // End profile controller

@@ -10,12 +10,13 @@ class User extends CI_Controller {
         // $this->load->library('form_validation');
         $this->load->model('user_model');
         $this->load->library('../controllers/common');
+        $this->load->library('referral_code');
     }
 
 	public function index()
 	{
 		// echo "welcome";
-		$this->load->view('tictactoe');
+		// $this->load->view('tictactoe');
 	}
 
 	/* ============        Signup         ============= */
@@ -27,7 +28,7 @@ class User extends CI_Controller {
 		$email_count = 0;
 
 		if(!empty($data)) {
-
+		
 			// Check given field is email or mobile
 			if(preg_match('/^[0-9]+$/', $data['user_email_mobile'])) {
 				$data['user_mobile'] = $data['user_email_mobile'];
@@ -87,8 +88,6 @@ class User extends CI_Controller {
 				$result = $this->user_model->insert_users($data);
 
 				if($result['status'] == "true") {
-
-					// $insert_settings = $this->user_model->default_user_settings($result['insert_id']);
 
 					if(!empty($data['user_email'])) {
 
@@ -191,10 +190,10 @@ class User extends CI_Controller {
 						$logs_data['logs_login_status'] = 1;
 						$logs_data['logs_login_count'] = 1;
 						$logs_data['logs_updated_date'] = date('Y-m-d H:i:s');
-						$device_token_update = $this->user_model->device_token_update($logs_data['logs_device_token']);
+						$device_token_update = $this->user_model->device_token_update($logs_data['logs_device_token'],$logs_data['users_id']);
 						$logs_result = $this->user_model->insert_userlogs($logs_data);
 						if($user_result['status'] == "true") {
-							$response = array("status"=>"true","status_code"=>"200","unique_id"=>$logs_data['unique_id'],"users_id"=>$logs_data['users_id'],"user_fullname"=>$user_data['user_fullname'],"user_name"=>"","user_profile_image"=>$user_data['user_profile_image'],"user_turfmate_image"=>'',"notification_count"=>0,"message"=>"Login successfully");
+							$response = array("status"=>"true","status_code"=>"200","unique_id"=>$logs_data['unique_id'],"users_id"=>$logs_data['users_id'],"user_fullname"=>$user_data['user_fullname'],"user_name"=>"","user_profile_image"=>$user_data['user_profile_image'],"user_turfmate_image"=>'',"turfmate"=>"false","notification_count"=>0,"message"=>"Login successfully","referral_status"=>$device_token_update);
 						}
 						else {
 							$response = array("status"=>"false","status_code"=>"500","message"=>"Error in insertion process!");
@@ -230,16 +229,25 @@ class User extends CI_Controller {
 					$update_user['user_status'] = 1;
 					$user_det_update = $this->user_model->update_users($user_id,$update_user);
 				}
+
+				//=================================check user is turfnate-2018-03-17ch_-
+				$user_exist = $this->user_model->check_turfmate_user($user_id);
+				$turfmate_user = "false";
+				if(!empty($user_exist))
+				{
+					$turfmate_user = "true";
+				}
+				//===========================================================
 				$notification_count = $this->user_model->user_notification_count($user_id);
 				$data['logs_login_type'] = $data['user_register_type'];
 				unset($data['user_fullname'],$data['user_email'],$data['user_mobile'],$data['user_profile_image'],$data['user_register_type']);
 				$data['unique_id'] = $this->common->random_unique_id();
 				$data['logs_login_status'] = 1;
 				$data['logs_updated_date'] = date('Y-m-d H:i:s');
-				$device_token_update = $this->user_model->device_token_update($data['logs_device_token']);
+				$device_token_update = $this->user_model->device_token_update($data['logs_device_token'],$user_id);
 				$logs_result = $this->user_model->update_userlogs($user_id,$data);
 				$turfmate_profile_img = (!empty($user_result['user_turfmate_image'])) ? $user_result['user_turfmate_image'] : '';
-				$response = array("status"=>"true","status_code"=>"200","unique_id"=>$data['unique_id'],"users_id"=>$user_id,"user_fullname"=>$user_result['user_fullname'],"user_name"=>$user_result['user_name'],"user_profile_image"=>$user_result['user_profile_image'],"user_turfmate_image"=>$turfmate_profile_img,"notification_count"=>$notification_count,"message"=>"Login successfully");
+				$response = array("status"=>"true","status_code"=>"200","unique_id"=>$data['unique_id'],"users_id"=>$user_id,"user_fullname"=>$user_result['user_fullname'],"user_name"=>$user_result['user_name'],"user_profile_image"=>$user_result['user_profile_image'],"user_turfmate_image"=>$turfmate_profile_img,"turfmate"=>$turfmate_user,"notification_count"=>$notification_count,"message"=>"Login successfully","referral_status"=>$device_token_update);
 			}
 		}
 		else {
@@ -326,9 +334,19 @@ class User extends CI_Controller {
 					$data['logs_login_status'] = 1;
 					$data['logs_updated_date'] = date('Y-m-d H:i:s');
 					$notification_count = $this->user_model->user_notification_count($user_id);
-					$device_token_update = $this->user_model->device_token_update($data['logs_device_token']);
+					$device_token_update = $this->user_model->device_token_update($data['logs_device_token'],$user_id);
 					$logs_result = $this->user_model->update_userlogs($user_id,$data);
-					$response = array("status"=>"true","status_code"=>"200","unique_id"=>$data['unique_id'],"users_id"=>$user_id,"user_fullname"=>$signin_verify['user_fullname'],"user_name"=>$signin_verify['user_name'],"user_profile_image"=>$signin_verify['user_profile_image'],"user_turfmate_image"=>$signin_verify['user_turfmate_image'],"notification_count"=>$notification_count,"message"=>"Login successfully");
+
+					//=================================check user is turfnate-2018-03-17ch_-
+					$user_exist = $this->user_model->check_turfmate_user($user_id);
+					$turfmate_user = "false";
+					if(!empty($user_exist))
+					{
+						$turfmate_user = "true";
+					}
+					//===========================================================
+
+					$response = array("status"=>"true","status_code"=>"200","unique_id"=>$data['unique_id'],"users_id"=>$user_id,"user_fullname"=>$signin_verify['user_fullname'],"user_name"=>$signin_verify['user_name'],"user_profile_image"=>$signin_verify['user_profile_image'],"user_turfmate_image"=>$signin_verify['user_turfmate_image'],"turfmate"=>$turfmate_user,"notification_count"=>$notification_count,"message"=>"Login successfully","referral_status"=>$device_token_update);
 				}
 				else {
 					$response = array("status"=>"false","status_code"=>"400","message"=>"Something went wrong. Please try again later");	
@@ -492,11 +510,43 @@ class User extends CI_Controller {
 
 				if($data['api_action'] == "registration") {
 
+					if(empty($data['logs_device_type']) || empty($data['logs_device_token'])) {
+						
+						$response = array("status"=>"false","status_code"=>"400","message"=>"Unable to fetch device details");
+						echo json_encode($response);
+						exit;	
+					}
+
 					$user_id = $user_data['users_id'];
 					$update_data['user_verification'] = 1;
 					$update_data['user_status'] = 1;
 					$user_update = $this->user_model->update_users($user_id,$update_data);
-					$response = array("status"=>"true","status_code"=>"200","message"=>"Verified successfully");
+
+					// Signin data
+					$logs_data['logs_login_type'] = 1;
+					$logs_data['unique_id'] = $this->common->random_unique_id();
+					$logs_data['logs_login_status'] = 1;
+					$logs_data['logs_updated_date'] = date('Y-m-d H:i:s');
+					$logs_data['logs_device_type'] = $data['logs_device_type'];
+					$logs_data['logs_device_token'] = $data['logs_device_token'];
+					$notification_count = $this->user_model->user_notification_count($user_id);
+					$device_token_update = $this->user_model->device_token_update($data['logs_device_token'],$user_id);
+					$logs_result = $this->user_model->update_userlogs($user_id,$logs_data);
+
+					// response data
+					$user_turfmate_image = (!empty($user_data['user_turfmate_image'])) ? $user_data['user_turfmate_image'] : '';
+
+					//=================================check user is turfnate-2018-03-17ch_-
+					$user_exist = $this->user_model->check_turfmate_user($user_id);
+					$turfmate_user = "false";
+					if(!empty($user_exist))
+					{
+						$turfmate_user = "true";
+					}
+					//===========================================================
+
+
+					$response = array("status"=>"true","status_code"=>"200","unique_id"=>$logs_data['unique_id'],"users_id"=>$user_id,"user_fullname"=>$user_data['user_fullname'],"user_name"=>$user_data['user_name'],"user_profile_image"=>$user_data['user_profile_image'],"user_turfmate_image"=>$user_turfmate_image,"turfmate"=>$turfmate_user,"notification_count"=>$notification_count,"message"=>"Login successfully","referral_status"=>$device_token_update);
 				}
 				else if($data['api_action'] == "forgot_password") {
 
@@ -619,6 +669,5 @@ class User extends CI_Controller {
 
 	}
 
-	
 
 } // End user controller

@@ -55,7 +55,7 @@ class Notification_model extends CI_Model {
 		else {
 			$model_data['status'] = $this->db->where('notifications_id',$data['notifications_id'])->update('ct_notifications',array('notifications_status'=>2));
 		
-			$this->db->select('n.notifications_from_id,u.user_fullname,u.user_name,u.user_turfmate_image,u.user_profile_image,n.notifications_from_id as user_id,IFNULL(n.notifications_event_id,"") as notifications_event_id,n.notifications_type,IFNULL(n.event_review_type,"") as event_review_type,IFNULL(e.users_id,"") as event_user_id,IFNULL(g.beginner_id,"") as beginner_id,IFNULL(g.tictactoe_status,"") as tictactoe_status,IFNULL(hn.original_word,"") as original_word,IFNULL(hn.recent_word,"") as recent_word,IFNULL(hn.live_word,"") as live_word,IFNULL(hn.hint,"") as hint');
+			$this->db->select('n.notifications_from_id,u.user_fullname,u.user_name,IFNULL(u.user_turfmate_image,"") as user_turfmate_image,u.user_profile_image,n.notifications_from_id as user_id,IFNULL(n.notifications_event_id,"") as notifications_event_id,n.notifications_type,IFNULL(n.event_review_type,"") as event_review_type,IFNULL(e.users_id,"") as event_user_id,IFNULL(g.playing_user_id,"") as beginner_id,IFNULL(g.tictactoe_status,"") as tictactoe_status,IFNULL(hn.original_word,"") as original_word,IFNULL(hn.recent_word,"") as recent_word,IFNULL(hn.live_word,"") as live_word,IFNULL(hn.hint,"") as hint');
 			$this->db->from('ct_notifications n');
 			$this->db->join('ct_events e','n.notifications_event_id=e.events_id','left');
 			$this->db->join('ct_game_tictactoe g','n.notifications_event_id=g.game_tictactoe_id AND n.notifications_type="game_tictactoe"','left');

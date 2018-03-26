@@ -202,7 +202,7 @@ class Common {
 			$body['aps'] = array(
 								'alert' => $alert,
 								'sound' => 'default',
-								'badge' => 1,
+								'badge' => 0,
 								'result'=> $message
 							);
 			$payload = json_encode($body);
@@ -362,7 +362,7 @@ class Common {
 				$body['aps'] = array(
 								'alert' => $alert,
 								'sound' => 'default',
-								'badge' => 1,
+								'badge' => 0,
 								'result'=> $message
 							);
 
@@ -486,7 +486,7 @@ class Common {
 				$body['aps'] = array(
 								'alert' => $alert,
 								'sound' => 'default',
-								'badge' => 1,
+								'badge' => 0,
 								'result'=> $message
 							);
 
@@ -565,7 +565,4 @@ class Common {
 	// 	fclose($fp);		
 	// }
 
-
-
-
-} // Common controller
+} // End common controller

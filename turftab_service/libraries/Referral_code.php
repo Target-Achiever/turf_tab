@@ -3,7 +3,7 @@
 class Referral_Code
 {
     
-    private $initial_code = 'TT-0000-AAA';
+    private $initial_code = 'RA-0000-AAA';
 
     // To create dynamic referral code with sequence
     public function generate_referral_code()

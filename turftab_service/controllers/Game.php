@@ -13,7 +13,8 @@ class Game extends CI_Controller {
 
 	public function index()
 	{
-		echo "welcome";
+		// echo "welcome";
+		$this->load->view('tictactoe');
 	}
 
 	/* ============         Hangman game         =========== */
@@ -77,29 +78,37 @@ class Game extends CI_Controller {
 	   		}
 	   		else if($data['api_action'] == "details") {
 
-	   			
+	   			// $hangman_details = $this->game_model->hangman_details($data['game_hangman_id']);
+
+	   			// if(!empty($hangman_details)) {
+	   			// 	$response = array("status"=>"true","status_code"=>"200","server_data"=>$hangman_details,"message"=>"Listed successfully");
+	   			// }
+	   			// else {
+	   			// 	$response = array("status"=>"false","status_code"=>"400","message"=>"No record(s) found");
+	   			// }
+	   			//==================================================================2018-03-07
 	   			$hangman_details = $this->game_model->hangman_details($data['game_hangman_id']);
+
+
+	   			if(!empty($hangman_details)) {
 
 	   			//=====user data for push notification
 	   			$user_id = $hangman_details['from_users_id'];//game requester device info 
   				$user_device_details = $this->game_model->get_users_device_details($user_id);
-
-	   			if(!empty($hangman_details)) {
-
+  				
 	   				// Save notifications
-					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $hangman_details['from_users_id'],'notifications_msg'=> "Game started.",'notifications_type'=> "game_hangman", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
-				// $save_notifications = $this->game_model->save_notifications($notification_data);
+				$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $hangman_details['from_users_id'],'notifications_msg'=> "Game started.",'notifications_type'=> "hangman_started", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
+				$save_notifications = $this->game_model->save_notifications($notification_data);
 	   			//===============================
 
 	   				$user_device_type = ($user_device_details['logs_device_type'] == 1) ? "android" : "ios";
   					$user_device_token = array($user_device_details['logs_device_token']);
-  					
 
 	   				//======================================send notification 
 	   				$msg = array (
 										'title' => "You have a new notification.",
-										'message' => " started the game.",
-										'notifications_type' => "game_hangman",
+										'message' => $user_name." have started the game.",
+										'notifications_type' => "hangman_started",
 										'notifications_id' => $save_notifications['insert_id'],
 										'notifications_from_id' => $data['users_id'],
 										'notifications_event_id' => $data['game_hangman_id']
@@ -124,8 +133,10 @@ class Game extends CI_Controller {
   						$user_id = $data['friend_id'];
   						$user_device_details = $this->game_model->get_users_device_details($user_id);
 
+  						$game_status_message = (isset($data['game_hangman_result']) && $data['game_hangman_result']=="1") ? "has solved your Hangman Challenge." : "has failed to solve your Hangman Challenge.";
+
 	  					// Save notifications
-	  					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $data['friend_id'],'notifications_msg'=> "has completed your hangman task.",'notifications_type'=> "hangman_completed", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
+	  					$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $data['friend_id'],'notifications_msg'=> $game_status_message,'notifications_type'=> "hangman_completed", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
 	  					$save_notifications = $this->game_model->save_notifications($notification_data);
 
   						if(!empty($user_device_details)) {
@@ -136,7 +147,7 @@ class Game extends CI_Controller {
 			  				if(!empty($user_device_token)) {
 				  				$msg = array (
 											'title' => "You have a new notification.",
-											'message' => $user_name." has completed your hangman task.",
+											'message' => $user_name." ".$game_status_message,
 											'notifications_type' => "hangman_completed",
 											'notifications_id' => $save_notifications['insert_id'],
 											'notifications_from_id' => $data['users_id'],
@@ -185,8 +196,7 @@ class Game extends CI_Controller {
 
     		if($data['api_action'] == "create") {
 
-    			$insert_array = array('sender_id'=>$data['users_id'],'receiver_id'=>$data['friend_id'],'tictactoe_question'=>$data['tictactoe_question'],'tictactoe_answer'=>$data['tictactoe_answer'],'tictactoe_status'=>1,'tictactoe_updated_date'=>date('Y-m-d H:i:s'));
-    			$insert_tictactoe_data = $this->game_model->insert_tictactoe($insert_array);
+    			$insert_tictactoe_data = $this->game_model->insert_tictactoe($data);
 
     			if($insert_tictactoe_data['status'] == "true") {
 
@@ -240,11 +250,11 @@ class Game extends CI_Controller {
 	   			// answer_status - 1 (correct), 2 (wrong)
 	   			if(!empty($data['answer_status']) && $data['answer_status'] == 1) {
 
-	   				$data['beginner_id'] = $data['users_id'];
+	   				$data['playing_user_id'] = $data['users_id'];
 	   				$notifications_msg = "has to start the game first.";
 	   			}
 	   			else {
-	   				$data['beginner_id'] = $data['friend_id'];
+	   				$data['playing_user_id'] = $data['friend_id'];
 	   				$notifications_msg = "lost the chance to start first. you have to start the game first.";
 	   			}
 
@@ -362,7 +372,15 @@ class Game extends CI_Controller {
 
 			$hangman_data = $this->game_model->get_hangman_status($data['game_hangman_id']);
 
-			$response = array("status"=>"true","status_code"=>"200","server_data"=>$hangman_data,"message"=>"Listed successfully");
+			if(!empty($hangman_data))
+				{
+
+					$response = array("status"=>"true","status_code"=>"200","server_data"=>$hangman_data,"message"=>"Listed successfully");
+				}else
+					{
+						$response = array("status"=>"false","status_code"=>"400","message"=>"Game doesn't start.");
+					}
+
    		}
  		else {
 			$response = array("status"=>"false","status_code"=>"404","message"=>"Fields must not be Empty");

@@ -85,6 +85,17 @@ class User_model extends CI_Model {
 		return $model_data;
 	}
 
+	/*=======check wether the user is turfnate user==============ch-_-2018-03-17*/
+
+    public function check_turfmate_user($user_id)
+    {
+
+        $model_data = $this->db->select('users_id')->get_where('ct_turfmates_matching',array('users_id'=>$user_id))->row_array();
+
+        return $model_data;
+    }
+    /*=======check wether the user is turfnate user==============*/
+
 	/* =============         Update user details        ======== */
 	public function update_users($user_id,$data)
 	{
@@ -156,10 +167,18 @@ class User_model extends CI_Model {
 	}
 
 	/* ========    If device token already exists means, update that as empty  ======== */
-	public function device_token_update($device_token)
+	public function device_token_update($device_token,$user_id)
 	{
 		$model_data = $this->db->where('logs_device_token',$device_token)->update('ct_user_logs',array('logs_device_token'=>''));
-		return TRUE;
+
+		$referral_data = $this->db->get_where('ct_referral',array('users_id'=>$user_id))->num_rows();
+
+		if($referral_data == 1) {
+			return 1;
+		}
+		else {
+			return 2;
+		}
 	}
 
 	/* ========    New notification count  ======== */
@@ -175,11 +194,14 @@ class User_model extends CI_Model {
 	public function default_user_settings($user_id)
 	{
 
+		$ref_code = $this->referral_code->generate_referral_code();
+
 		$insert_settings_data = array(
 									'users_id' => $user_id,
 									'profile_image_show' => 1,
 									'profile_album_show' => 1,
 									'mutual_friends_show' => 1,
+									'turfmate_section_show' => 1,
 									'user_radius' => 10,
 									'user_settings_updated_date' => date('Y-m-d H:i:s')
 								);
@@ -193,7 +215,8 @@ class User_model extends CI_Model {
 									'user_multimedia_date' => date('Y-m-d H:i:s'),
 									// 'user_multimedia_post' => 3,
 									// 'user_multimedia_total' => 3,
-									'user_credits_status' => 1
+									'user_credits_status' => 1,
+									'user_referral_code' =>$ref_code
 								);
 		$modal_credits_data = $this->db->insert('ct_user_credits',$insert_credits_data);
 
@@ -208,9 +231,6 @@ class User_model extends CI_Model {
 		
 		return TRUE;
 	}
-
-
-
 
 
 } // End user model

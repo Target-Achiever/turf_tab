@@ -105,15 +105,18 @@ class Game_model extends CI_Model {
     /* =============       Tic tac toe game creation        ============== */
     public function insert_tictactoe($data) {
 
-        $blocked_count = $this->user_blocked_count($data['sender_id'],$data['receiver_id']);
+        $blocked_count = $this->user_blocked_count($data['users_id'],$data['friend_id']);
         $model_data = array();
 
         if($blocked_count == 0) {
 
-            $insert_data = $this->db->insert('ct_game_tictactoe',$data);
-            if($insert_data) {
+            $insert_game_data = $this->db->insert('ct_game_tictactoe',array('sender_id'=>$data['users_id'],'receiver_id'=>$data['friend_id'],'tictactoe_status'=>1,'tictactoe_updated_date'=>date('Y-m-d H:i:s')));
+            $inserted_id = $this->db->insert_id();
+            $insert_ques_data = $this->db->insert('ct_tictactoe_quiz',array('game_tictactoe_id'=>$inserted_id,'tictactoe_question'=>$data['tictactoe_question'],'tictactoe_answer'=>$data['tictactoe_answer'],'tictactoe_quiz_status'=>1));
+
+            if($insert_ques_data) {
                 $model_data['status'] = "true";
-                $model_data['insert_id'] = $this->db->insert_id();
+                $model_data['insert_id'] = $inserted_id;
             }
             else {
                 $model_data['status'] = "false";
@@ -131,7 +134,7 @@ class Game_model extends CI_Model {
     /* =================     To get tictactoe game details by game id      =========== */
     public function tictactoe_details($game_id) {
 
-        $model_data = $this->db->select('(SELECT IFNULL(SUM(s1.sender_score),"") FROM ct_game_tictactoe as s1 WHERE s1.tictactoe_status=3 AND s1.winner_id=sender_id) as sender_total_score,(SELECT IFNULL(SUM(s2.receiver_score),"") FROM ct_game_tictactoe as s2 WHERE s2.tictactoe_status=3 AND s2.winner_id=receiver_id) as receiver_total_score,game_tictactoe_id,sender_id,receiver_id,tictactoe_question,tictactoe_answer,IFNULL(beginner_id,"") as beginner_id,IFNULL(sender_score,"") as sender_score,IFNULL(receiver_score,"") as receiver_score,IFNULL(winner_id,"") as winner_id,tictactoe_status,tictactoe_updated_date,tictactoe_created_date')->get_where('ct_game_tictactoe',array('game_tictactoe_id'=>$game_id))->row_array();
+        $model_data = $this->db->select('(SELECT IFNULL(SUM(s1.sender_score),"") FROM ct_game_tictactoe as s1 WHERE s1.tictactoe_status=3 AND s1.winner_id=sender_id) as sender_total_score,(SELECT IFNULL(SUM(s2.receiver_score),"") FROM ct_game_tictactoe as s2 WHERE s2.tictactoe_status=3 AND s2.winner_id=receiver_id) as receiver_total_score,game_tictactoe_id,sender_id,receiver_id,IFNULL(sender_score,"") as sender_score,IFNULL(winner_id,"") as winner_id,tictactoe_status,tictactoe_updated_date,tictactoe_created_date')->get_where('ct_game_tictactoe',array('game_tictactoe_id'=>$game_id))->row_array();
         
         return $model_data;
     }
@@ -147,7 +150,8 @@ class Game_model extends CI_Model {
 
             if($tictactoe_count == 1) {
 
-                $update_data = $this->db->where('game_tictactoe_id',$data['game_tictactoe_id'])->update('ct_game_tictactoe',array('beginner_id'=>$data['beginner_id'],'tictactoe_status'=> 2,'tictactoe_updated_date'=>date('Y-m-d H:i:s')));
+                $update_data = $this->db->where('game_tictactoe_id',$data['game_tictactoe_id'])->update('ct_game_tictactoe',array('playing_user_id'=>$data['playing_user_id'],'tictactoe_status'=> 2,'tictactoe_updated_date'=>date('Y-m-d H:i:s')));
+                $update_data = $this->db->where('game_tictactoe_id',$data['game_tictactoe_id'])->limit(1)->update('ct_tictactoe_quiz',array('tictactoe_quiz_status'=>2));
                 $model_data['status'] = "true";
             }
             else {

@@ -16,7 +16,7 @@ class Profile_model extends CI_Model {
     	return $record_count;
     }
 
-    /* =============       User device token for multiple users        ============== */
+    /* =============       Fetch user device token        ============== */
     public function get_users_device_details($user_id) {
 
         $where_cond = '(logs_login_status=1 AND users_id ="'.$user_id.'")';
@@ -79,6 +79,17 @@ class Profile_model extends CI_Model {
         }
         return $model_data;
     }
+    /*=======check wether the user is turfnate user==============ch-_-2018-03-17*/
+
+    public function check_turfmate_match($user_id,$action_id)
+    {
+
+        $where_cond = '((sender_id="'.$user_id.'" AND receiver_id="'.$action_id.'" AND like_status=2) OR (receiver_id="'.$user_id.'" AND sender_id="'.$action_id.'" AND   like_status=2))';
+        $model_data_count = $this->db->get_where('ct_turfmates',$where_cond)->num_rows();
+
+        return $model_data_count;
+    }
+    /*=======end check wether the user is turfnate user==============*/
 
     /* =================     To block the user       =========== */
     public function user_block($data) {
@@ -307,7 +318,7 @@ class Profile_model extends CI_Model {
                 $model_data['message'] = "No records found";
 
                 $where_cond = '((f.sender_id="'.$data['action_id'].'" OR f.receiver_id="'.$data['action_id'].'") AND f.friends_status=2)';
-                $this->db->select('us.users_id as user_id,us.user_name,us.user_fullname,us.user_profile_image,IFNULL(us.user_email,"") as user_email,IFNULL(us.user_mobile,"") as user_mobile,(CASE WHEN t.turfmates_id!="" THEN "true" ELSE "false" END) as turfmate_status,,s.profile_image_show');
+                $this->db->select('us.users_id as user_id,us.user_name,us.user_fullname,us.user_profile_image,IFNULL(us.user_email,"") as user_email,IFNULL(us.user_mobile,"") as user_mobile,(CASE WHEN t.turfmates_id!="" THEN "true" ELSE "false" END) as turfmate,,s.profile_image_show');
                 $this->db->from('ct_friends f');
                 $this->db->join('ct_user_settings s','(f.sender_id=s.users_id AND f.receiver_id='.$data['action_id'].') OR (f.receiver_id=s.users_id AND f.sender_id='.$data['action_id'].')','left');
                 $this->db->join('ct_users us','(f.sender_id=us.users_id AND f.receiver_id='.$data['action_id'].') OR (f.receiver_id=us.users_id AND f.sender_id='.$data['action_id'].')','left');

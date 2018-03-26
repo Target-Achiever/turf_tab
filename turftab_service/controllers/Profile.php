@@ -97,6 +97,15 @@ class Profile extends CI_Controller {
 						}
     				}
     				unset($user_profile_data['sender_id']);
+    				//=================================check user is turfnate-2018-03-17ch_-
+    				$user_match = $this->profile_model->check_turfmate_match($data['users_id'],$data['action_id']);
+    				$turfmate_user = "false";
+    				if($user_match == 1)
+    				{
+    					$turfmate_user = "true";
+    				}
+    				$user_profile_data = array_merge($user_profile_data,array("turfmate"=>$turfmate_user));
+    				//===========================================================
     				$response = array("status"=>"true","status_code"=>"200","server_data"=>$user_profile_data,"message"=>"Listed successfully");
     			}
     			else {
@@ -597,7 +606,7 @@ class Profile extends CI_Controller {
 						}
 						else if(!empty($friend_data['action_frndlist'])) {
 
-							$friends_data['friends_list'] = array_map(function($arr) { return $arr + array('friends_status' => '','turfmate_status' => ''); }, $friend_data['action_frndlist']);
+							$friends_data['friends_list'] = array_map(function($arr) { return $arr + array('friends_status' => '','turfmate' => ''); }, $friend_data['action_frndlist']);
 							$response = array("status"=>"true","status_code"=>"200","server_data"=> $friends_data,"message"=>"Listed successfully");
 						}
 						else {

@@ -20,7 +20,7 @@ class Settings_model extends CI_Model {
     public function user_settings_details($data) {
        
         $where_cond = '(s.users_id="'.$data['users_id'].'")';
-        $settings_data = $this->db->select('s.profile_image_show,s.mutual_friends_show,s.user_radius,IFNULL(u.user_email,"") as user_email,IFNULL(u.user_country_code,"") as user_country_code,IFNULL(u.user_mobile,"") as user_mobile,IFNULL(u.user_password,"") as user_password');
+        $settings_data = $this->db->select('s.profile_image_show,s.mutual_friends_show,s.turfmate_section_show,s.user_radius,IFNULL(u.user_email,"") as user_email,IFNULL(u.user_country_code,"") as user_country_code,IFNULL(u.user_mobile,"") as user_mobile,IFNULL(u.user_password,"") as user_password');
         $this->db->from('ct_user_settings s');
         $this->db->join('ct_users u','s.users_id=u.users_id AND u.user_password!=""','left');
         $settings_data = $this->db->where($where_cond)->get()->row_array();
@@ -166,13 +166,30 @@ class Settings_model extends CI_Model {
         return $model_data;
     }
 
+    /* ===========     User referral credits     ======= */
+    public function user_referral_credits($data)
+    {
 
-    
+        $referral_count = $this->db->get_where('ct_referral',array('referred_by'=>$data['users_id'],'referral_status'=>1))->num_rows();
 
+        if($referral_count >= 5) {
 
+            $redeem_val = 5;
 
-    
-    
+            $reminder = $referral_count % $redeem_val;
 
+            $limit = $referral_count - $reminder;
 
-} // End profile model
+            $quotient = $limit / $redeem_val;
+
+            $where_cond = '(referred_by="'.$data['users_id'].'" AND referral_status=1)';
+            $referral_count = $this->db->where($where_cond)->limit($limit,0)->update('ct_referral',array('referral_status'=>2));
+            $update_credits = $this->db->where('users_id',$data['users_id'])->set('redeem_credits','redeem_credits+'.$quotient.'',false)->set('total_credits','total_credits+'.$quotient.'',false)->update('ct_user_credits');
+        }
+
+        $model_data = $this->db->select('user_like_total,user_multimedia_total,redeem_credits,total_credits,user_referral_code,(select count(r.referral_id) from ct_referral r where r.referred_by="'.$data['users_id'].'" AND r.referral_status=1) as unused_referrals')->get_where('ct_user_credits',array('users_id'=>$data['users_id']))->row_array();
+   
+        return $model_data;       
+    }
+
+} // End settings model
