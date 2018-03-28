@@ -315,7 +315,7 @@ class Common {
         		}
         		// close connection
         		curl_close($ch);
-			}      	
+			}
 		}
 
 		if(!empty($device_details['ios'])) {
@@ -385,8 +385,8 @@ class Common {
 			fclose($fp);
 		}
 	}
-
-		/* ==================  Multiple push notification - local chat   ================= */
+	
+	/* ==================  Multiple push notification - local chat   ================= */
 	public function multiple_push_notification_local_chat($device_details,$message) {
 
 		$this_obj =& get_instance();

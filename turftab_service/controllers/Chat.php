@@ -452,8 +452,12 @@ class Chat extends CI_Controller {
 										if(!empty($file_name_split[1]) && $elem['content_type'] == 2) {
 											$elem['thumb'] = UPLOADS."chat_media/image/".$file_name_split[0]."_thumb.".$file_name_split[1];
 										}
-										else if(!empty($file_name_split[1]) && $elem['content_type'] == 3) {
+										else if(!empty($file_name_split[1]) && $elem['content_type'] == 3)
+										{
 											$elem['thumb'] = UPLOADS."chat_media/video/".$file_name_split[0]."_thumb.png";		
+										}
+										else if($elem['content_type'] == 4 || $elem['content_type'] == 5 || $elem['content_type'] == 7) {
+											$elem['thumb'] = $elem['content'];
 										}
 										else {
 											$elem['thumb'] = "";
@@ -541,6 +545,9 @@ class Chat extends CI_Controller {
 							$thumbnail_path = $config['upload_path'].$file_name_random."_thumb".$file_ext;
 							$thumbnail = $this->create_chat_thumbnail($data['content_type'],$file_path,$thumbnail_path);
 						}
+						else {
+							$thumbnail_path = $file_path;
+						}
 					}
 				}
 				$data['content'] = $chat_content;
@@ -587,9 +594,10 @@ class Chat extends CI_Controller {
 								'content' => $data['content'],
 								'thumb' => $thumb_image,
 								'content_type' => $data['content_type'],
-								'user_name' => $user_name,
+								'user_name' => $loggedin_user_name,
 								'local_conversation_created_date' => date('Y-m-d H:i:s'),
 								'user_profile_image' => $user_profile_image,
+								'is_anonymous' => $data['is_anonymous'],
 								'profile_image_show' => (!empty($user_profile_data['profile_image_show']) ? $user_profile_data['profile_image_show'] : '')
 							);
 							$send_notification = $this->common->multiple_push_notification_local_chat($device_details,$msg);
@@ -597,7 +605,7 @@ class Chat extends CI_Controller {
 					}
 				}
 
-				$message_array[] = array('local_conversation_id'=>$insert_message['insert_id'],"thumb"=>$thumb_image,"content"=>$data['content'],"is_anonymous"=>$data['is_anonymous'],"content_type"=>$data['content_type'],"notifications_from_id"=>$data['local_conversation_from_id'],"user_name"=>$user_name,"user_profile_image"=>$user_profile_image,"local_conversation_created_date"=>date('Y-m-d H:i:s'));
+				$message_array[] = array('local_conversation_id'=>$insert_message['insert_id'],"thumb"=>$thumb_image,"content"=>$data['content'],"is_anonymous"=>$data['is_anonymous'],"content_type"=>$data['content_type'],"notifications_from_id"=>$data['local_conversation_from_id'],"user_name"=>$loggedin_user_name,"user_profile_image"=>$user_profile_image,"local_conversation_created_date"=>date('Y-m-d H:i:s'));
 		
 				$media_restriction = $this->chat_model->user_multimedia_post($data['local_conversation_from_id']);
 				$media_count = (!empty($media_restriction['count']) ? $media_restriction['count'] : '0');

@@ -134,7 +134,10 @@ class Game_model extends CI_Model {
     /* =================     To get tictactoe game details by game id      =========== */
     public function tictactoe_details($game_id) {
 
-        $model_data = $this->db->select('(SELECT IFNULL(SUM(s1.sender_score),"") FROM ct_game_tictactoe as s1 WHERE s1.tictactoe_status=3 AND s1.winner_id=sender_id) as sender_total_score,(SELECT IFNULL(SUM(s2.receiver_score),"") FROM ct_game_tictactoe as s2 WHERE s2.tictactoe_status=3 AND s2.winner_id=receiver_id) as receiver_total_score,game_tictactoe_id,sender_id,receiver_id,IFNULL(sender_score,"") as sender_score,IFNULL(winner_id,"") as winner_id,tictactoe_status,tictactoe_updated_date,tictactoe_created_date')->get_where('ct_game_tictactoe',array('game_tictactoe_id'=>$game_id))->row_array();
+        $this->db->select('(SELECT IFNULL(SUM(s1.sender_score),"") FROM ct_game_tictactoe as s1 WHERE s1.tictactoe_status=3 AND s1.winner_id=sender_id) as sender_total_score,(SELECT IFNULL(SUM(s2.receiver_score),"") FROM ct_game_tictactoe as s2 WHERE s2.tictactoe_status=3 AND s2.winner_id=receiver_id) as receiver_total_score,g.game_tictactoe_id,g.sender_id,g.receiver_id,g.playing_user_id as beginner_id,IFNULL(g.sender_score,"") as sender_score,IFNULL(g.winner_id,"") as winner_id,g.tictactoe_status,g.tictactoe_updated_date,g.tictactoe_created_date,gq.tictactoe_question,gq.tictactoe_answer');
+        $this->db->from('ct_game_tictactoe g');
+        $this->db->join('ct_tictactoe_quiz gq','g.game_tictactoe_id=gq.game_tictactoe_id','left');
+        $model_data = $this->db->where('g.game_tictactoe_id',$game_id)->get()->row_array();
         
         return $model_data;
     }

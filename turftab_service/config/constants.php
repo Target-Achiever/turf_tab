@@ -103,4 +103,4 @@ define("ANDROID_NOTIFICATION_API_KEY","AAAALTkFmv4:APA91bHxKO3Xn7siylHXw-VwcDmOj
 
 // Ios
 define("TURFTAB_ENVIRONMENT","DEVELOPMENT"); // development environment
-// define("TURFTAB-ENVIRONMENT","PRODUCTION"); // production environment
+// define("TURFTAB_ENVIRONMENT","PRODUCTION"); // production environment

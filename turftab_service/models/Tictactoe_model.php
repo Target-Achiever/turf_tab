@@ -13,7 +13,7 @@ class Tictactoe_model extends CI_Model {
 
         $where_cond = '(gt.game_tictactoe_id="'.$game_id.'" AND gt.tictactoe_status!=3)';
 
-        $this->db->select('gt.game_tictactoe_id,(CASE WHEN u.users_id='.$user_id.' THEN u.users_id ELSE ur.users_id END) as user_id,(CASE WHEN u.users_id='.$user_id.' THEN u.user_fullname ELSE ur.user_fullname END) as user_name,(CASE WHEN u.users_id='.$user_id.' THEN ur.users_id ELSE u.users_id END) as opponent_id,(CASE WHEN u.users_id='.$user_id.' THEN ur.user_fullname ELSE u.user_fullname END) as opponent_name,gt.playing_user_id,IFNULL(gt.joined_player_ids,"") as joined_player_ids');
+        $this->db->select('gt.game_tictactoe_id,(CASE WHEN u.users_id='.$user_id.' THEN u.users_id ELSE ur.users_id END) as user_id,(CASE WHEN u.users_id='.$user_id.' THEN u.user_fullname ELSE ur.user_fullname END) as user_name,(CASE WHEN u.users_id='.$user_id.' THEN ur.users_id ELSE u.users_id END) as opponent_id,(CASE WHEN u.users_id='.$user_id.' THEN ur.user_fullname ELSE u.user_fullname END) as opponent_name,gt.playing_user_id as beginner_id,IFNULL(gt.joined_player_ids,"") as joined_player_ids');
         $this->db->from('ct_game_tictactoe gt');
         $this->db->join('ct_users u','u.users_id=gt.sender_id','inner');
         $this->db->join('ct_users ur','ur.users_id=gt.receiver_id','inner');
@@ -30,7 +30,7 @@ class Tictactoe_model extends CI_Model {
                 $update_data = $this->db->where('game_tictactoe_id',$game_id)->update('ct_game_tictactoe',array('joined_player_ids'=>implode(',',$exploded_data)));
 
                 if($player_count == 1) {
-                    if($game_data['playing_user_id'] == $game_data['user_id']) {
+                    if($game_data['beginner_id'] == $game_data['user_id']) {
                         $player1_id = $game_data['user_id'];
                         $player2_id = $game_data['opponent_id'];
                     }

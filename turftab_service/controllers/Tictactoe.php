@@ -14,42 +14,45 @@ class Tictactoe extends CI_Controller {
 	public function index()
 	{
 
+		// commented by siva. just use this for testing purpose
 
 		// 374
 
-		// static_data
-		$data['users_id'] = 374;
-		$data['user_name'] = "ibrahim";
-		$data['opponent_id'] = 375;
-		$data['opponent_name'] = "Diptiranjan Mallick";
-		$data['playing_user_id'] = 375;
-		$data['api_action'] = "game_start";
-		$data['game_tictactoe_id'] = 4;
+		// // static_data
+		// $data['users_id'] = 374;
+		// $data['user_name'] = "ibrahim";
+		// $data['opponent_id'] = 375;
+		// $data['opponent_name'] = "Diptiranjan Mallick";
+		// $data['playing_user_id'] = 375;
+		// $data['api_action'] = "game_start";
+		// $data['game_tictactoe_id'] = 4;
 
-		$game_status = $this->tictactoe_model->get_game_status($data['game_tictactoe_id']);
-		$data['tictactoe_status'] = $game_status;
-		$input_data['game'] = $data;
-		$this->load->view('tictactoe',$input_data);
+		// $game_status = $this->tictactoe_model->get_game_status($data['game_tictactoe_id']);
+		// $data['tictactoe_status'] = $game_status;
+		// $input_data['game'] = $data;
+		// $this->load->view('tictactoe',$input_data);
 	}
 
 	public function index2()
 	{
 
+		// commented by siva. just use this for testing purpose
+
 		// 375
 		
 		// static_data
-		$data['users_id'] = 375;
-		$data['user_name'] = "Diptiranjan Mallick";
-		$data['opponent_id'] = 374;
-		$data['opponent_name'] = "ibrahim";
-		$data['playing_user_id'] = 375;
-		$data['api_action'] = "game_start";
-		$data['game_tictactoe_id'] = 4;
+		// $data['users_id'] = 375;
+		// $data['user_name'] = "Diptiranjan Mallick";
+		// $data['opponent_id'] = 374;
+		// $data['opponent_name'] = "ibrahim";
+		// $data['playing_user_id'] = 375;
+		// $data['api_action'] = "game_start";
+		// $data['game_tictactoe_id'] = 4;
 
-		$game_status = $this->tictactoe_model->get_game_status($data['game_tictactoe_id']);
-		$data['tictactoe_status'] = $game_status;
-		$input_data['game'] = $data;
-		$this->load->view('tictactoe',$input_data);
+		// $game_status = $this->tictactoe_model->get_game_status($data['game_tictactoe_id']);
+		// $data['tictactoe_status'] = $game_status;
+		// $input_data['game'] = $data;
+		// $this->load->view('tictactoe',$input_data);
 
 		// echo "welcome";
 	}
@@ -60,13 +63,13 @@ class Tictactoe extends CI_Controller {
 		$data = json_decode(file_get_contents('php://input'),true);
 
 		// static_data
-		$data['users_id'] = 374;
-		$data['user_name'] = "ibrahim";
-		$data['opponent_id'] = 375;
-		$data['opponent_name'] = "Diptiranjan Mallick";
-		$data['playing_user_id'] = 375;
-		$data['api_action'] = "game_start";
-		$data['game_tictactoe_id'] = 4;
+		// $data['users_id'] = 374;
+		// $data['user_name'] = "ibrahim";
+		// $data['opponent_id'] = 375;
+		// $data['opponent_name'] = "Diptiranjan Mallick";
+		// $data['playing_user_id'] = 375;
+		// $data['api_action'] = "game_start";
+		// $data['game_tictactoe_id'] = 4;
 
   		if(!empty($data)) {
 
@@ -90,6 +93,7 @@ class Tictactoe extends CI_Controller {
 			else if($data['api_action'] == "game_start") {
 
 				$game_status = $this->tictactoe_model->get_game_status($data['game_tictactoe_id']);
+				$data['playing_user_id'] = $data['beginner_id'];
 				$data['tictactoe_status'] = $game_status;
 				$input_data['game'] = $data;
 				$this->load->view('tictactoe',$input_data);
