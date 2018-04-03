@@ -140,20 +140,35 @@ class Turfmate extends CI_Controller {
 
     		if(!empty($userlist)) {
     			$userlist_with_album = array();	
-    			
+
     			foreach ($userlist as $t_key => $t_val) {
 
 					if(!isset($userlist_with_album[$t_val['match_user_id']]))
 					{
 						$album_id = $t_val['album_id'];
 						$album_path = $t_val['albums_path'];
-						unset($t_val['match_precent'],$t_val['friend_status'],$t_val['album_id'],$t_val['user_id'],$t_val['albums_path']);
+						$file_type = $t_val['file_type'];
+						unset($t_val['match_precent'],$t_val['friend_status'],$t_val['album_id'],$t_val['user_id'],$t_val['albums_path'],$t_val['file_type']);
 						if(!empty($album_id)) {
+								
 							$userlist_with_album[$t_val['match_user_id']] = $t_val;
 
+							if($file_type == 2) {
 
+								$video_url = $album_path;
+								$video_file_name = str_replace(UPLOADS."turfmate_album/","",$album_path);
+								$file_name_split = explode('.',$video_file_name);
+								$album_path = UPLOADS."turfmate_album/".$file_name_split[0]."_thumb.png";
+							
+								$userlist_with_album[$t_val['match_user_id']]['album'][] = array('albums_id'=>$album_id,"albums_path"=>$album_path,'file_type'=>$file_type,'video_url'=>$video_url);
+							}
+							else {
 
-							$userlist_with_album[$t_val['match_user_id']]['album'][] = array('albums_id'=>$album_id,"albums_path"=>$album_path);
+								$userlist_with_album[$t_val['match_user_id']]['album'][] = array('albums_id'=>$album_id,"albums_path"=>$album_path,"file_type"=>$file_type);
+							}
+
+							// $userlist_with_album[$t_val['match_user_id']] = $t_val;
+							// $userlist_with_album[$t_val['match_user_id']]['album'][] = array('albums_id'=>$album_id,"albums_path"=>$album_path);
 						}
 						else {
 							$userlist_with_album[$t_val['match_user_id']] = $t_val;
@@ -569,6 +584,64 @@ class Turfmate extends CI_Controller {
 			$response = array("status"=>"false","status_code"=>"404","message"=>"Fields must not be Empty");
 		}
 		echo json_encode($response); 
+	}
+
+	/* ============         Turfmate other profile view (for android only)       ===================== */
+	public function user_turfmate_view() {
+
+		$data = json_decode(file_get_contents("php://input"),true);
+
+		if(!empty($data)) {
+
+			// Check login session
+			$unique_id_data['users_id'] = $data['users_id'];
+			$unique_id_data['unique_id'] = $data['unique_id'];
+			$unique_id_check = $this->turfmate_model->unique_id_verification($unique_id_data);
+			if($unique_id_check == 0) {
+				$response = array("status"=>"false","status_code"=>"301","message"=>"Session Expired");
+				echo json_encode($response);
+				exit;
+    		}
+
+    		$user_profile = $this->turfmate_model->user_turfmate_profile_view($data['action_id']);
+
+    		if(!empty($user_profile)) {
+
+    			$user_profile_data = array();
+	  			$user_profile_data = $user_profile[0];
+
+	  			unset($user_profile_data['albums_id'],$user_profile_data['albums_path'],$user_profile_data['file_type']);
+
+				$user_profile_data['album'] = array();
+	    
+	    		foreach ($user_profile as $al_key => $al_val) {
+		
+					if(!empty($al_val['albums_id'])) {
+	
+						if($al_val['file_type'] == 2) {
+
+							$video_url = $al_val['albums_path'];
+							$video_file_name = str_replace(UPLOADS."turfmate_album/","",$al_val['albums_path']);
+							$file_name_split = explode('.',$video_file_name);
+							$al_val['albums_path'] = UPLOADS."turfmate_album/".$file_name_split[0]."_thumb.png";
+							$user_profile_data['album'][] = array('albums_id'=>$al_val['albums_id'],'albums_path'=>$al_val['albums_path'],'file_type'=>$al_val['file_type'],'video_url'=>$video_url);
+						}
+						else {
+							$user_profile_data['album'][] = array('albums_id'=>$al_val['albums_id'],'albums_path'=>$al_val['albums_path'],'file_type'=>$al_val['file_type']);
+						}
+					}
+				}
+
+				$response = array("status"=>"true","status_code"=>"200","server_data"=>$user_profile_data,"message"=>"Listed successfully");
+			}
+    		else {
+    			$response = array("status"=>"false","status_code"=>"400","message"=>"No records found");
+    		}	   		
+    	}
+    	else {
+			$response = array("status"=>"false","status_code"=>"404","message"=>"Fields must not be Empty");
+		}
+		echo json_encode($response);    	
 	}
 
 	

@@ -110,6 +110,8 @@ $route['turfmate_profile'] = 'turfmate/user_turfmate_profile';
 $route['turfmate_album'] = 'turfmate/user_turfmate_album';
 $route['turfmate_invite'] = 'turfmate/user_turfmate_invite';
 $route['turfmate_matchist'] = 'turfmate/user_turfmate_matchist';
+// Turfmate other profile view
+$route['turfmate_fullview'] = 'turfmate/user_turfmate_view';
 
 /* ==============      Turfmate Controller End     ========= */
 

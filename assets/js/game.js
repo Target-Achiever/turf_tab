@@ -74,6 +74,8 @@ setInterval(game_status, 2000);
 
 boxs.click(function() {
 
+
+
   if($(this).hasClass('selected')) {
     return false;
   }
@@ -100,41 +102,80 @@ boxs.click(function() {
   if(return_val) {
     var sec = $(this).attr('id');
     var divt = $(this);  
-    var confirm = doConfirm_question(function yes()
-    {
-      var ques = $('#question_form').find('#form1_ques').val();
-      var ans = $('#question_form').find('#form1_ans').val();
-      $.ajax({
+    
+    var game_completed_status = check_game_completed(sec,hidden_val);
 
-        url : base_url+"update_game_status",
-        async : false,
-        type : "POST",
-        data : {game_id:game_id,sec:sec,player:hidden_val,user_id:opponent_user_id,ques:ques,ans:ans},
-        dataType : "json",
-        cache:false,
-        success : function(res) {
+    if(!game_completed_status) {
 
-            if(res.status == "true") {
+      var confirm = doConfirm_question(function yes()
+      {
+        var ques = $('#question_form').find('#form1_ques').val();
+        var ans = $('#question_form').find('#form1_ans').val();
+        $.ajax({
 
-                if(hidden_val == 'p1') {
-                  $(divt).html('<b class="b1">X<b/>');
-                  $(divt).css("background","#CCCCCC");
-                  $(divt).addClass('selected');
-                }
-                else if(hidden_val == 'p2') {
-                  $(divt).html('<b class="b2">O<b/>');
-                  $(divt).css("background","#CCCCCC");
-                  $(divt).addClass('selected');
-                }
+          url : base_url+"update_game_status",
+          async : false,
+          type : "POST",
+          data : {game_id:game_id,sec:sec,player:hidden_val,user_id:opponent_user_id,ques:ques,ans:ans},
+          dataType : "json",
+          cache:false,
+          success : function(res) {
+
+              if(res.status == "true") {
+
+                  if(hidden_val == 'p1') {
+                    $(divt).html('<b class="b1">X<b/>');
+                    $(divt).css("background","#CCCCCC");
+                    $(divt).addClass('selected');
+                  }
+                  else if(hidden_val == 'p2') {
+                    $(divt).html('<b class="b2">O<b/>');
+                    $(divt).css("background","#CCCCCC");
+                    $(divt).addClass('selected');
+                  }
+              }
+              else {
+                  alert(res.message);  
+              }
             }
-            else {
-                alert(res.message);  
+        });
+      },
+      function no()
+      {
+        var ques = '';
+        var ans = '';
+        $.ajax({
+
+          url : base_url+"update_game_status",
+          async : false,
+          type : "POST",
+          data : {game_id:game_id,sec:sec,player:hidden_val,user_id:opponent_user_id,ques:ques,ans:ans},
+          dataType : "json",
+          cache:false,
+          success : function(res) {
+
+              if(res.status == "true") {
+
+                  if(hidden_val == 'p1') {
+                    $(divt).html('<b class="b1">X<b/>');
+                    $(divt).css("background","#CCCCCC");
+                    $(divt).addClass('selected');
+                  }
+                  else if(hidden_val == 'p2') {
+                    $(divt).html('<b class="b2">O<b/>');
+                    $(divt).css("background","#CCCCCC");
+                    $(divt).addClass('selected');
+                  }
+              }
+              else {
+                  alert(res.message);  
+              }
             }
-          }
+        });
       });
-    },
-    function no()
-    {
+    }
+    else {
+
       var ques = '';
       var ans = '';
       $.ajax({
@@ -146,26 +187,26 @@ boxs.click(function() {
         dataType : "json",
         cache:false,
         success : function(res) {
-
+  
             if(res.status == "true") {
 
-                if(hidden_val == 'p1') {
-                  $(divt).html('<b class="b1">X<b/>');
-                  $(divt).css("background","#CCCCCC");
-                  $(divt).addClass('selected');
-                }
-                else if(hidden_val == 'p2') {
-                  $(divt).html('<b class="b2">O<b/>');
-                  $(divt).css("background","#CCCCCC");
-                  $(divt).addClass('selected');
-                }
+              if(hidden_val == 'p1') {
+                $(divt).html('<b class="b1">X<b/>');
+                $(divt).css("background","#CCCCCC");
+                $(divt).addClass('selected');
+              }
+              else if(hidden_val == 'p2') {
+                $(divt).html('<b class="b2">O<b/>');
+                $(divt).css("background","#CCCCCC");
+                $(divt).addClass('selected');
+              }
             }
             else {
-                alert(res.message);  
+              alert(res.message);  
             }
           }
       });
-    });
+    }
   }
 });
  
@@ -611,6 +652,61 @@ $('.popupCloseButton').click(function(){
   }
 
 
+function check_game_completed(var_id,player_val) {
+
+  var value = {};
+
+  var var_value = var_id.replace("sec", "");
+
+  value['value0'] = strip_tags($('#sec0').html());
+  value['value1'] = strip_tags($('#sec1').html());
+  value['value2'] = strip_tags($('#sec2').html());
+  value['value3'] = strip_tags($('#sec3').html());
+  value['value4'] = strip_tags($('#sec4').html());
+  value['value5'] = strip_tags($('#sec5').html());
+  value['value6'] = strip_tags($('#sec6').html());
+  value['value7'] = strip_tags($('#sec7').html());
+  value['value8'] = strip_tags($('#sec8').html());
+
+  value["value"+var_value] = (player_val == "p1") ? "X" : "O";
+
+  // 0,1,2 
+  if(value['value0'] != '' && value['value1'] !='' && value['value2'] !='' && value['value0'] === value['value1'] && value['value1'] === value['value2'] && value['value2'] === value['value0']) {
+    return true;
+  }
+  // 0,3,6
+  else if(value['value0'] != '' && value['value3'] != '' && value['value6'] != '' && value['value0'] === value['value3'] && value['value3'] === value['value6'] && value['value6'] === value['value0']) { 
+    return true;
+  }
+  // 0,4,8
+  else if(value['value0'] != '' && value['value4'] != '' && value['value8'] != '' && value['value0'] === value['value4'] && value['value4'] === value['value8'] && value['value8'] === value['value0']) {    
+    return true;
+  }
+  // 1,4,7
+  else if(value['value1'] != '' && value['value4'] != '' && value['value7'] != '' && value['value1'] === value['value4'] && value['value4'] === value['value7'] && value['value7'] === value['value1']) {    
+    return true;
+  }
+  // 2,5,8
+  else if(value['value2'] != '' && value['value5'] != '' && value['value8'] != '' && value['value2'] === value['value5'] && value['value5'] === value['value8'] && value['value8'] === value['value2']) {    
+    return true;
+  }
+  // 2,4,6
+  else if(value['value2'] != '' && value['value4'] != '' && value['value6'] != '' && value['value2'] === value['value4'] && value['value4'] === value['value6'] && value['value6'] === value['value2']) {    
+    return true;
+  }
+  // 3,4,5
+  else if(value['value3'] != '' && value['value4'] != '' && value['value5'] != '' && value['value3'] === value['value4'] && value['value4'] === value['value5'] && value['value5'] === value['value3']) {    
+    return true;
+  }
+  // 6,7,8
+  else if(value['value6'] != '' && value['value7'] != '' && value['value8'] != '' && value['value6'] === value['value7'] && value['value7'] === value['value8'] && value['value8'] === value['value6']) {    
+    return true;
+  }
+  else if(value['value0'] != '' && value['value1'] != '' && value['value2'] != '' && value['value3'] != '' && value['value4'] != '' && value['value5'] != '' && value['value6'] != '' && value['value7'] != '' && value['value8'] != '') {
+    return true;
+  }
+  return false;
+}
    
          
   

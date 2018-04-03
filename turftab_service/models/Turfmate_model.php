@@ -158,14 +158,19 @@ class Turfmate_model extends CI_Model {
         $exclude_ids[] = array('user_id'=>$data['users_id']);
         $exclude_user_ids = array_column($exclude_ids, 'user_id');
 
+        // sexual preference
+        $sexual_pre_id = 5;
+        $user_sexual_pre = $this->db->select('(CASE WHEN answer_id=1 THEN "male" WHEN answer_id=2 THEN "female" WHEN answer_id=3 THEN "bi" ELSE "transgender" END) as sex_pre')->get_where('ct_turfmates_matching',array('users_id'=>$data['users_id'],'question_id'=>$sexual_pre_id))->row_array();
+        $user_sex_pre = (!empty($user_sexual_pre['sex_pre'])) ? $user_sexual_pre['sex_pre'] : 'male';
+
         $model_data = $this->db->query("select *
                         from (
                             select tmu.users_id as match_user_id,u.user_fullname,IFNULL(u.user_name,'') as user_name,IFNULL(u.user_email,'') as user_email,IFNULL(u.user_mobile,'') as user_mobile,IFNULL(u.user_gender,'') as user_gender,IFNULL(u.user_dob,'') as user_dob,IFNULL(u.user_profile_image,'') as user_profile_image,IFNULL(u.user_turfmate_image,'') as user_turfmate_image,IFNULL(u.user_description,'') as user_description,(SUM(CASE WHEN tm.answer_id=tmu.answer_id THEN 1 ELSE 0 END) / ".$total_questions_count.") * 100 as match_precent,(CASE WHEN t.turfmates_id!='' THEN 1 ELSE 2 END) as friend_status from ct_turfmates_matching as tm,ct_turfmates_matching as tmu
-                            left join ct_users as u on tmu.users_id=u.users_id
+                            inner join ct_users as u on tmu.users_id=u.users_id
                             left join ct_turfmates as t on t.sender_id=u.users_id AND t.receiver_id=".$data['users_id']." AND t.like_status=1
-                            where tm.question_id=tmu.question_id AND tm.users_id=".$data['users_id']." AND tmu.users_id NOT IN (".implode(',', $exclude_user_ids).")
+                            where tm.question_id!='".$sexual_pre_id."' AND tm.question_id=tmu.question_id AND tm.users_id=".$data['users_id']." AND tmu.users_id NOT IN (".implode(',', $exclude_user_ids).")
                             group by match_user_id 
-                            having match_user_id NOT IN (select (CASE WHEN blocklist_from_id!=".$data['users_id']." THEN blocklist_from_id ELSE blocklist_to_id END) as block_ids from ct_turfmate_blocklist where blocklist_from_id = ".$data['users_id']." OR blocklist_to_id = ".$data['users_id'].")
+                            having match_user_id NOT IN (select (CASE WHEN blocklist_from_id!=".$data['users_id']." THEN blocklist_from_id ELSE blocklist_to_id END) as block_ids from ct_turfmate_blocklist where blocklist_from_id = ".$data['users_id']." OR blocklist_to_id = ".$data['users_id'].") AND user_gender='".$user_sex_pre."'
                         ) as x
                         left join (
                             select a.albums_id as album_id,a.users_id as user_id,IFNULL(a.file_type,'') as file_type,a.albums_path
@@ -454,16 +459,29 @@ class Turfmate_model extends CI_Model {
     }
 
     //========================== questions - ethnicity, religion and sexual ch-_-
-
     public function user_turfmate_options()
-        {
-            $question_ids = array(2,3,5);
-            $this->db->select('options');
-            $this->db->from('ct_questions');
-            $this->db->where_in('questions_id', $question_ids);
-            $model_data=$this->db->get()->result_array();
-            
-            return $model_data;
-        }
-   
+    {
+        $question_ids = array(2,3,5);
+        $this->db->select('options');
+        $this->db->from('ct_questions');
+        $this->db->where_in('questions_id', $question_ids);
+        $model_data=$this->db->get()->result_array();
+        
+        return $model_data;
+    }
+
+    /* Turfmate other profile view */
+    public function user_turfmate_profile_view($action_id)
+    {
+
+        $model_data = array();
+        $this->db->select('u.users_id as user_id,IFNULL(u.user_fullname,"") as user_fullname,IFNULL(u.user_name,"") as user_name,IFNULL(u.user_country_code,"") as user_country_code,IFNULL(u.user_email,"") as user_email,IFNULL(u.user_mobile,"") as user_mobile,IFNULL(u.user_gender,"") as user_gender,IFNULL(u.user_dob,"") as user_dob,IFNULL(u.user_turfmate_image,"") as user_turfmate_image,IFNULL(u.user_description,"") as user_description,IFNULL(u.user_ethnicity,"")as user_ethnicity,IFNULL(u.user_sexual,"") user_sexual,IFNULL(u.user_religion,"") user_religion,IFNULL(u.user_hobbies,"") user_hobbies,u.user_register_type,u.user_profile_updated_date,u.user_profile_created_date,a.albums_id,a.albums_path,a.file_type');  
+        $this->db->from('ct_users u');
+        $this->db->join('ct_albums a','u.users_id=a.users_id AND a.album_type=2 AND a.albums_status=1','left');
+        $this->db->where('u.users_id',$action_id);
+        $model_data = $this->db->get()->result_array();
+
+        return $model_data;      
+    }
+       
 } // End turfmate model

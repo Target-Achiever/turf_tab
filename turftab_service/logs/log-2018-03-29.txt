@@ -1,0 +1,2 @@
+ERROR - 2018-03-29 15:56:22 --> Severity: Warning --> Cannot use a scalar value as an array C:\xampp\htdocs\turf_tab\turftab_service\models\Game_model.php 193
+ERROR - 2018-03-29 19:41:03 --> Severity: Notice --> Undefined index: playing_user_id C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 6

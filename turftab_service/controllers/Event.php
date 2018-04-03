@@ -401,7 +401,7 @@ class Event extends CI_Controller {
 
     				if($data['users_id'] != $data['event_user_id']) {
 
-    					//	push notification
+    					//	push notification - for admin
 	  					$user_id = $data['event_user_id'];
 	  					$user_device_details = $this->event_model->get_users_device_details($user_id,"single");
 
@@ -426,6 +426,111 @@ class Event extends CI_Controller {
 		  						$send_notification = $this->common->single_push_notification_service($user_device_type,$user_device_token,$msg,$user_id);
 		  					}
 						}
+    					
+    					//	push notification - for interested users
+    					$user_id_values = $this->event_model->get_interested_users_list($data['event_id'],$data['users_id']);
+
+    					$user_ids = (!empty($user_id_values)) ? array_column($user_id_values,'users_id') : array();
+
+    					if(!empty($user_ids)) {
+
+    						$notification_data = array();
+
+    						foreach ($user_ids as $uk => $uv) {
+			
+								// Save notifications
+								$notification_data[] = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $uv,'notifications_event_id'=> $data['event_id'],'notifications_msg'=> "commented on your interested event.",'notifications_type'=> "event_comment" ,'notifications_status'=> 1);
+							}
+		
+							$save_notifications = $this->event_model->save_notifications_batch($notification_data);
+							$user_device_details = $this->event_model->get_users_device_details($user_ids,"multiple");
+							$notification_ids = (!empty($save_notifications['insert_ids'])) ? $save_notifications['insert_ids'] : array();
+
+							if(!empty($user_device_details)) {
+
+								$device_details = array();
+
+								foreach ($user_device_details as $key => $value) {
+
+									$notification_id_key = array_search($value['users_id'], array_column($notification_ids, 'user_id'));
+									$value['notification_id'] = $notification_ids[$notification_id_key]['notifications_id'];
+
+									if($value['logs_device_type'] == 1) {
+									
+										$device_details['android'][] = $value;
+									}
+									else {
+										$device_details['ios'][] = $value;
+									}
+								}
+
+								// Save notifications
+								if(!empty($device_details)) {
+
+									$msg = array (
+										'title' => "You have a new notification.",
+										'message' => $user_name." commented your interested event.",
+										'notifications_type' => "event_comment",
+										'notifications_from_id' => $data['users_id'],
+										'notifications_event_id' => $data['event_id']
+									);
+									$send_notification = $this->common->multiple_push_notification_service($device_details,$msg);
+								}
+							}
+    					}
+    				}
+    				else {
+
+						$user_id_values = $this->event_model->get_interested_users($data['event_id']);
+						
+						if(!empty($user_id_values)) {
+
+							$user_ids = array_column($user_id_values,'users_id');
+
+							foreach ($user_ids as $uk => $uv) {
+						
+								// Save notifications
+								$notification_data[] = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $uv,'notifications_event_id'=> $data['event_id'],'notifications_msg'=> "commented on his event.",'notifications_type'=> "event_comment" ,'notifications_status'=> 1);
+							}
+
+							$save_notifications = $this->event_model->save_notifications_batch($notification_data);
+
+							$user_device_details = $this->event_model->get_users_device_details($user_ids,"multiple");
+
+							$notification_ids = (!empty($save_notifications['insert_ids'])) ? $save_notifications['insert_ids'] : array();
+
+							if(!empty($user_device_details)) {
+
+								$device_details = array();
+
+								foreach ($user_device_details as $key => $value) {
+
+									$notification_id_key = array_search($value['users_id'], array_column($notification_ids, 'user_id'));
+									$value['notification_id'] = $notification_ids[$notification_id_key]['notifications_id'];
+
+									if($value['logs_device_type'] == 1) {
+									
+										$device_details['android'][] = $value;
+									}
+									else {
+										$device_details['ios'][] = $value;
+									}
+								}
+
+								// Save notifications
+								if(!empty($device_details)) {
+
+									$msg = array (
+										'title' => "You have a new notification.",
+										'message' => $user_name." commented on his event.",
+										'notifications_type' => "event_comment",
+										'notifications_from_id' => $data['users_id'],
+										'notifications_event_id' => $data['event_id']
+									);
+									$send_notification = $this->common->multiple_push_notification_service($device_details,$msg);
+								}
+							}
+						}
     				}
 
 	   				$response = array("status"=>"true","status_code"=>"200","message"=>"Comment posted successfully");
@@ -443,8 +548,8 @@ class Event extends CI_Controller {
     			}
     			else {
     				$response = array("status"=>"false","status_code"=>"400","message"=>"No records found");
-    			}  			
-	   		}
+    			}
+    		}
 	   		else if($data['api_action'] == "delete_all_comment") {
 
     			$event_comment_data = $this->event_model->user_events_delete_all_comment($data);

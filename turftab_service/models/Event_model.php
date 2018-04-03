@@ -569,5 +569,24 @@ class Event_model extends CI_Model {
         }
     }
 
+    public function get_interested_users_list($event_id,$user_id) {
+
+        $model_data = array();
+
+        $where_cond = '(events_id="'.$event_id.'" AND event_invitation_status=1 AND users_id!="'.$user_id.'")';
+        $model_data = $this->db->select('users_id')->get_where('ct_event_invitation',$where_cond)->result_array();
+
+        return $model_data;
+    }
+
+    public function get_interested_users($event_id) {
+
+        $model_data = $this->db->select('users_id')->get_where('ct_event_invitation',array('events_id'=>$event_id,'event_invitation_status'=>1))->result_array();
+
+        return $model_data;
+    }
+
+    
+
 
 } // End event model

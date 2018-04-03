@@ -3,6 +3,7 @@
 $game_id = $game['game_tictactoe_id'];
 $tictactoe_status = $game['tictactoe_status'];
 $game_status = ($tictactoe_status == 1) ? "Waiting for opponent" : ($tictactoe_status == 2 ? "Game started" : ($tictactoe_status == 3 ? "Game completed" : ''));
+
 if($game['playing_user_id'] == $game['users_id']) {
 	$player1_id = $game['users_id'];
 	$player2_id = $game['opponent_id'];

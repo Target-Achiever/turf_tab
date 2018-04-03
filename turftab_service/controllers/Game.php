@@ -91,30 +91,6 @@ class Game extends CI_Controller {
 
 
 	   			if(!empty($hangman_details)) {
-
-	   			//=====user data for push notification
-	   			$user_id = $hangman_details['from_users_id'];//game requester device info 
-  				$user_device_details = $this->game_model->get_users_device_details($user_id);
-  				
-	   				// Save notifications
-				$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $hangman_details['from_users_id'],'notifications_msg'=> "Game started.",'notifications_type'=> "hangman_started", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
-				$save_notifications = $this->game_model->save_notifications($notification_data);
-	   			//===============================
-
-	   				$user_device_type = ($user_device_details['logs_device_type'] == 1) ? "android" : "ios";
-  					$user_device_token = array($user_device_details['logs_device_token']);
-
-	   				//======================================send notification 
-	   				$msg = array (
-										'title' => "You have a new notification.",
-										'message' => $user_name." have started the game.",
-										'notifications_type' => "hangman_started",
-										'notifications_id' => $save_notifications['insert_id'],
-										'notifications_from_id' => $data['users_id'],
-										'notifications_event_id' => $data['game_hangman_id']
-										);
-	  						$send_notification = $this->common->single_push_notification_service($user_device_type,$user_device_token,$msg,$data['users_id']);
-	   				//=======================================================
 	   				$response = array("status"=>"true","status_code"=>"200","server_data"=>$hangman_details,"message"=>"Listed successfully");
 	   			}
 	   			else {
@@ -322,6 +298,30 @@ class Game extends CI_Controller {
 
 			$update_hangman_data = $this->game_model->update_hangman_notification($data);
 
+			if($update_hangman_data['status'] == "insert") {
+
+				//=====user data for push notification
+	   			$user_id = $data['friend_id']; //game requester device info 
+  				$user_device_details = $this->game_model->get_users_device_details($user_id);
+  				
+	   				// Save notifications
+				$notification_data = array('notifications_from_id'=> $data['users_id'],'notifications_to_id'=> $user_id,'notifications_msg'=> "have started the game",'notifications_type'=> "hangman_started", "notifications_event_id"=>$data['game_hangman_id'],'notifications_status'=> 1);
+				$save_notifications = $this->game_model->save_notifications($notification_data);
+
+   				$user_device_type = ($user_device_details['logs_device_type'] == 1) ? "android" : "ios";
+				$user_device_token = array($user_device_details['logs_device_token']);
+
+   				$msg = array (
+								'title' => "You have a new notification.",
+								'message' => $user_name." have started the game.",
+								'notifications_type' => "hangman_started",
+								'notifications_id' => $save_notifications['insert_id'],
+								'notifications_from_id' => $data['users_id'],
+								'notifications_event_id' => $data['game_hangman_id']
+							);
+				$send_notification = $this->common->single_push_notification_service($user_device_type,$user_device_token,$msg,$user_id);
+			}
+
 			// //	push notification
   	// 		$user_id = $data['friend_id'];
   	// 		$user_device_details = $this->game_model->get_users_device_details($user_id);
@@ -373,13 +373,14 @@ class Game extends CI_Controller {
 			$hangman_data = $this->game_model->get_hangman_status($data['game_hangman_id']);
 
 			if(!empty($hangman_data))
-				{
+			{
 
-					$response = array("status"=>"true","status_code"=>"200","server_data"=>$hangman_data,"message"=>"Listed successfully");
-				}else
-					{
-						$response = array("status"=>"false","status_code"=>"400","message"=>"Game doesn't start.");
-					}
+				$response = array("status"=>"true","status_code"=>"200","server_data"=>$hangman_data,"message"=>"Listed successfully");
+			}
+			else
+			{
+				$response = array("status"=>"false","status_code"=>"400","message"=>"Game doesn't start.");
+			}
 
    		}
  		else {

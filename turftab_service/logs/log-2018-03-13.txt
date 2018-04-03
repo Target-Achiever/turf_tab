@@ -1,0 +1,9 @@
+ERROR - 2018-03-13 18:13:20 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 3
+ERROR - 2018-03-13 18:13:20 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 4
+ERROR - 2018-03-13 18:13:20 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 6
+ERROR - 2018-03-13 18:13:20 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 6
+ERROR - 2018-03-13 18:13:20 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 7
+ERROR - 2018-03-13 18:13:20 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 8
+ERROR - 2018-03-13 18:13:20 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 9
+ERROR - 2018-03-13 18:13:20 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 10
+ERROR - 2018-03-13 18:13:20 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 50

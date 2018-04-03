@@ -185,13 +185,15 @@ class Game_model extends CI_Model {
 
         if($check_already == 0) {
 
-            $model_data = $this->db->insert('ct_hangman_notifications',array('game_hangman_id'=>$data['game_hangman_id'],'original_word'=>$data['original_word'],'recent_word'=>$data['recent_word'],'live_word'=>$data['live_word'],'hint'=>$data['hint']));
+            $model_query = $this->db->insert('ct_hangman_notifications',array('game_hangman_id'=>$data['game_hangman_id'],'original_word'=>$data['original_word'],'recent_word'=>$data['recent_word'],'live_word'=>$data['live_word'],'hint'=>$data['hint']));
+            $model_data['status'] = "insert";
         }
         else {
-            $model_data = $this->db->where('game_hangman_id',$data['game_hangman_id'])->update('ct_hangman_notifications',array('recent_word'=>$data['recent_word'],'live_word'=>$data['live_word']));
+            $model_query = $this->db->where('game_hangman_id',$data['game_hangman_id'])->update('ct_hangman_notifications',array('recent_word'=>$data['recent_word'],'live_word'=>$data['live_word']));
+            $model_data['status'] = "update";
         }
 
-        return TRUE;
+        return $model_data;
     }
 
     /* =============       Get hangman status        ============== */

@@ -18,14 +18,14 @@ class Tictactoe extends CI_Controller {
 
 		// 374
 
-		// // static_data
+		// static_data
 		// $data['users_id'] = 374;
 		// $data['user_name'] = "ibrahim";
 		// $data['opponent_id'] = 375;
 		// $data['opponent_name'] = "Diptiranjan Mallick";
 		// $data['playing_user_id'] = 375;
 		// $data['api_action'] = "game_start";
-		// $data['game_tictactoe_id'] = 4;
+		// $data['game_tictactoe_id'] = 11;
 
 		// $game_status = $this->tictactoe_model->get_game_status($data['game_tictactoe_id']);
 		// $data['tictactoe_status'] = $game_status;
@@ -47,7 +47,7 @@ class Tictactoe extends CI_Controller {
 		// $data['opponent_name'] = "ibrahim";
 		// $data['playing_user_id'] = 375;
 		// $data['api_action'] = "game_start";
-		// $data['game_tictactoe_id'] = 4;
+		// $data['game_tictactoe_id'] = 11;
 
 		// $game_status = $this->tictactoe_model->get_game_status($data['game_tictactoe_id']);
 		// $data['tictactoe_status'] = $game_status;

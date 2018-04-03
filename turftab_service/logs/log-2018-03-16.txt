@@ -1,0 +1,35 @@
+ERROR - 2018-03-16 12:26:02 --> Severity: Warning --> fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14090086:SSL routines:ssl3_get_server_certificate:certificate verify failed C:\xampp\htdocs\turf_tab\turftab_system\libraries\Email.php 2055
+ERROR - 2018-03-16 12:26:02 --> Severity: Warning --> fsockopen(): Failed to enable crypto C:\xampp\htdocs\turf_tab\turftab_system\libraries\Email.php 2055
+ERROR - 2018-03-16 12:26:02 --> Severity: Warning --> fsockopen(): unable to connect to ssl://smtp.gmail.com:465 (Unknown error) C:\xampp\htdocs\turf_tab\turftab_system\libraries\Email.php 2055
+ERROR - 2018-03-16 13:27:12 --> Query error: Unknown column 'users_id' in 'field list' - Invalid query: INSERT INTO `ct_xmpp_single_chat` (`users_id`, `receiver_id`, `chat_content`) VALUES ('1', '2', '{\"body\":\"hello da\",\"date\":\"2018-02-18\",\"isMine\":\"true\",\"message_cat\":\"1\",\"msg_id\":\"4324\",\"time\":\"12:00 PM\",\"image_original_link\":\"\",\"image_thumb_link\":\"\"}')
+ERROR - 2018-03-16 13:27:28 --> Query error: Unknown column 'sender' in 'field list' - Invalid query: INSERT INTO `ct_xmpp_single_chat` (`sender`, `receiver_id`, `chat_content`) VALUES ('1', '2', '{\"body\":\"hello da\",\"date\":\"2018-02-18\",\"isMine\":\"true\",\"message_cat\":\"1\",\"msg_id\":\"4324\",\"time\":\"12:00 PM\",\"image_original_link\":\"\",\"image_thumb_link\":\"\"}')
+ERROR - 2018-03-16 13:27:49 --> Severity: Notice --> Undefined index: receiver C:\xampp\htdocs\turf_tab\turftab_service\controllers\Xmpp_chat.php 32
+ERROR - 2018-03-16 13:28:26 --> Severity: Notice --> Undefined index: sender C:\xampp\htdocs\turf_tab\turftab_service\controllers\Xmpp_chat.php 48
+ERROR - 2018-03-16 15:20:44 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 3
+ERROR - 2018-03-16 15:20:44 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 4
+ERROR - 2018-03-16 15:20:44 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 6
+ERROR - 2018-03-16 15:20:44 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 6
+ERROR - 2018-03-16 15:20:44 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 7
+ERROR - 2018-03-16 15:20:44 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 8
+ERROR - 2018-03-16 15:20:44 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 9
+ERROR - 2018-03-16 15:20:44 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 10
+ERROR - 2018-03-16 15:20:44 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 50
+ERROR - 2018-03-16 17:51:31 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 3
+ERROR - 2018-03-16 17:51:31 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 4
+ERROR - 2018-03-16 17:51:31 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 6
+ERROR - 2018-03-16 17:51:31 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 6
+ERROR - 2018-03-16 17:51:31 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 7
+ERROR - 2018-03-16 17:51:31 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 8
+ERROR - 2018-03-16 17:51:31 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 9
+ERROR - 2018-03-16 17:51:31 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 10
+ERROR - 2018-03-16 17:51:31 --> Severity: Notice --> Undefined variable: game C:\xampp\htdocs\turf_tab\turftab_service\views\tictactoe.php 48
+ERROR - 2018-03-16 18:24:35 --> Severity: Notice --> Undefined index: sender_id C:\xampp\htdocs\turf_tab\turftab_service\models\Game_model.php 108
+ERROR - 2018-03-16 18:24:35 --> Severity: Notice --> Undefined index: receiver_id C:\xampp\htdocs\turf_tab\turftab_service\models\Game_model.php 108
+ERROR - 2018-03-16 18:25:16 --> Severity: Notice --> Undefined index: sender_id C:\xampp\htdocs\turf_tab\turftab_service\models\Game_model.php 108
+ERROR - 2018-03-16 18:30:59 --> Query error: Unknown column 'tictactoe_question' in 'field list' - Invalid query: SELECT (SELECT IFNULL(SUM(s1.sender_score), "") FROM ct_game_tictactoe as s1 WHERE s1.tictactoe_status=3 AND s1.winner_id=sender_id) as sender_total_score, (SELECT IFNULL(SUM(s2.receiver_score), "") FROM ct_game_tictactoe as s2 WHERE s2.tictactoe_status=3 AND s2.winner_id=receiver_id) as receiver_total_score, `game_tictactoe_id`, `sender_id`, `receiver_id`, `tictactoe_question`, `tictactoe_answer`, IFNULL(beginner_id, "") as beginner_id, IFNULL(sender_score, "") as sender_score, IFNULL(receiver_score, "") as receiver_score, IFNULL(winner_id, "") as winner_id, `tictactoe_status`, `tictactoe_updated_date`, `tictactoe_created_date`
+FROM `ct_game_tictactoe`
+WHERE `game_tictactoe_id` = '4'
+ERROR - 2018-03-16 19:55:32 --> Query error: Unknown column 'tictactoe_quiz_status' in 'field list' - Invalid query: UPDATE `ct_game_tictactoe` SET `tictactoe_quiz_status` = 1
+WHERE `game_tictactoe_id` = '4'
+ERROR - 2018-03-16 19:55:59 --> Severity: Error --> Call to a member function limit() on boolean C:\xampp\htdocs\turf_tab\turftab_service\models\Game_model.php 154
